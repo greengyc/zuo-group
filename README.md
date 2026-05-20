@@ -19,6 +19,16 @@ Double-click `index.html` to open the website in a browser.
 - `join.html` - International recruiting page
 - `contact.html` - Contact and academic profile links
 
+## Editing the top hero text
+
+The home page uses its own large hero layout. For all other pages, the top hero area is locked to a fixed visual grid:
+
+- first line: red page label inside `<p class="eyebrow">...</p>`
+- second line: white title inside `<h1>...</h1>`
+- third line: white subtitle inside the following `<p>...</p>`
+
+When updating a page later, edit only the text inside those three tags. Keep the tag order unchanged so the top area stays visually aligned across pages.
+
 ## Content sources used
 
 The X-MOL group page and the Northwest University faculty page were used as data sources for public facts. The website itself is not a direct translation of X-MOL; it is written as a new international English research-group website.
