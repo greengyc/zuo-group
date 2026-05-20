@@ -1,6 +1,10 @@
 // Edit this file to update publications.
 // Journal names are italicized automatically. Only the year is bold.
 window.ZUO_PUBLICATIONS = {
+  linkLabels: {
+    doi: "DOI",
+    journal: "Journal"
+  },
   independent: [
     {
       year: "2026",

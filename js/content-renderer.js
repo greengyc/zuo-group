@@ -237,17 +237,19 @@
     }
   }
 
-  function publicationLinks(item) {
+  function publicationLinks(item, labels = {}) {
     const links = [];
+    const doiLabel = item.doiButtonLabel || labels.doi || "DOI";
+    const journalLabel = item.journalButtonLabel || labels.journal || "Journal";
 
     if (item.doiUrl) {
-      links.push(`<a href="${escapeAttr(item.doiUrl)}" target="_blank" rel="noreferrer">DOI</a>`);
+      links.push(`<a href="${escapeAttr(item.doiUrl)}" target="_blank" rel="noreferrer">${escapeHtml(doiLabel)}</a>`);
     } else if (item.doiLabel) {
       links.push(`<span>${escapeHtml(item.doiLabel)}</span>`);
     }
 
     if (item.journalUrl) {
-      links.push(`<a href="${escapeAttr(item.journalUrl)}" target="_blank" rel="noreferrer">Journal</a>`);
+      links.push(`<a href="${escapeAttr(item.journalUrl)}" target="_blank" rel="noreferrer">${escapeHtml(journalLabel)}</a>`);
     }
 
     return links.length ? `<div class="pub-links">${links.join("")}</div>` : "";
@@ -294,7 +296,7 @@
               <h3>${escapeHtml(item.title)}</h3>
               <p>${escapeHtml(item.authors)}</p>
               <p class="citation"><em>${escapeHtml(item.journal)}</em> <strong>${escapeHtml(item.year)}</strong>, ${escapeHtml(item.details)}</p>
-              ${publicationLinks(item)}
+              ${publicationLinks(item, data.linkLabels)}
             </div>
           </article>`;
         })

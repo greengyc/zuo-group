@@ -40,8 +40,6 @@ const contentFiles = [
 ];
 
 const allowedText = new Set([
-  "doi",
-  "journal",
   "menu"
 ]);
 

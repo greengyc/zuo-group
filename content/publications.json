@@ -21,6 +21,10 @@
       "title": "Selected earlier work"
     }
   },
+  "linkLabels": {
+    "doi": "DOI",
+    "journal": "Journal"
+  },
   "independent": [
     {
       "visible": true,

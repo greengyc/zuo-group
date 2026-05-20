@@ -243,6 +243,12 @@ collections:
                   - { label: "Show this section", name: "show", widget: "boolean", required: false, default: true }
                   - { label: "Small red label", name: "eyebrow", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
+          - label: "Publication link button labels"
+            name: "linkLabels"
+            widget: "object"
+            fields:
+              - { label: "DOI button text", name: "doi", widget: "string", default: "DOI" }
+              - { label: "Journal button text", name: "journal", widget: "string", default: "Journal" }
           - label: "Independent work at NWU"
             name: "independent"
             widget: "list"
@@ -259,7 +265,9 @@ collections:
               - { label: "TOC placeholder color", name: "tocColor", widget: "select", required: false, options: ["blue", "teal", "red", "gold"] }
               - { label: "DOI URL", name: "doiUrl", widget: "string", required: false }
               - { label: "DOI label if no DOI URL", name: "doiLabel", widget: "string", required: false }
+              - { label: "Custom DOI button text", name: "doiButtonLabel", widget: "string", required: false }
               - { label: "Journal URL", name: "journalUrl", widget: "string", required: false }
+              - { label: "Custom journal button text", name: "journalButtonLabel", widget: "string", required: false }
           - label: "Prior to NWU"
             name: "prior"
             widget: "list"
