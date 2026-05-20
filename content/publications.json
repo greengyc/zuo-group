@@ -1,0 +1,253 @@
+{
+  "independent": [
+    {
+      "year": "2026",
+      "title": "Photoredox-catalyzed Chem- and Stereoselective Thiosulfonylation of Cyclopropylamides",
+      "authors": "Lebin Qian, Yi Wang, Lei Zhu, Xiaotian Qi, Xinjun Luan, Zhijun Zuo*",
+      "journal": "Angew. Chem., Int. Ed.",
+      "details": "65, e7485683.",
+      "tocColor": "blue",
+      "doiLabel": "DOI to be added",
+      "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/journal/15213773"
+    },
+    {
+      "year": "2026",
+      "title": "Photoinduced Selective Hydrodefluorination of Trifluoromethylarenes Enabled by Base-Activated Hantzsch Esters",
+      "authors": "Yuxiang Zhang, Xinyue Ma, Wei Sun, and Zhijun Zuo*",
+      "journal": "Org. Lett.",
+      "details": "28, 5004.",
+      "tocColor": "teal",
+      "doiUrl": "https://doi.org/10.1021/acs.orglett.6c01178",
+      "journalUrl": "https://pubs.acs.org/doi/10.1021/acs.orglett.6c01178"
+    },
+    {
+      "year": "2025",
+      "title": "Organophotoredox and Cobalt-catalyzed 1,2-Difunctionalization of Mono-donor Cyclopropanes",
+      "authors": "Jinrong Du, Jiale Li, Lebin Qian, Xinjun Luan*, Zhijun Zuo*",
+      "journal": "Angew. Chem., Int. Ed.",
+      "details": "64, e202515761.",
+      "tocColor": "red",
+      "doiUrl": "https://doi.org/10.1002/anie.202515761",
+      "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/anie.202515761"
+    },
+    {
+      "year": "2025",
+      "title": "Modular Synthetic Platform for Diverse Substituted Benzylamines through Selective Amide-Aldehyde-Aldehyde Cross-Cyclization Reaction",
+      "authors": "Haonan Wei, Haohao Huang, Heiyan Liu, Zhijun Zuo*",
+      "journal": "Green Synth. Catal.",
+      "details": "DOI: 10.1016/j.gresc.2025.06.003.",
+      "tocColor": "gold",
+      "doiUrl": "https://doi.org/10.1016/j.gresc.2025.06.003",
+      "journalUrl": "https://www.sciencedirect.com/journal/green-synthesis-and-catalysis"
+    },
+    {
+      "year": "2025",
+      "title": "Photoinduced Cross-Coupling of Trifluoromethylarenes with Heteroarenes via Unactivated C(sp3)-F and C(sp2)-H Selective Cleavage",
+      "authors": "Jiyao Zhang, Yuxiang Zhang, Lebin Qian, Zhijun Zuo*",
+      "journal": "Org. Lett.",
+      "details": "DOI: 10.1021/acs.orglett.4c04420.",
+      "tocColor": "blue",
+      "doiUrl": "https://doi.org/10.1021/acs.orglett.4c04420",
+      "journalUrl": "https://pubs.acs.org/journal/orlef7"
+    },
+    {
+      "year": "2024",
+      "title": "Metal-Free Photoinduced-Radical Hydrocyclization of 2-Isocyanides: A Unified Synthetic Approach to Facilely Assemble Diverse N-Heteroarenes",
+      "authors": "Ziyi Wang, Haonan Wei, Jingrong Du, Zhijun Zuo*",
+      "journal": "Green Chem.",
+      "details": "DOI: 10.1039/D4GC03774J.",
+      "tocColor": "teal",
+      "doiUrl": "https://doi.org/10.1039/D4GC03774J",
+      "journalUrl": "https://www.rsc.org/journals-books-databases/about-journals/green-chemistry/"
+    },
+    {
+      "year": "2024",
+      "title": "Carbonate-Assisted Selectively Deoxygenative Cross-Coupling Reaction between Aryl and Aliphatic Aldehydes: A Straightforward Route to Access alpha-Alkylated Aryl Ketones",
+      "authors": "Yu Sun, Yi Wang, Zhijun Zuo*",
+      "journal": "Org. Chem. Front.",
+      "details": "DOI: 10.1039/D4QO01517G.",
+      "tocColor": "red",
+      "doiUrl": "https://doi.org/10.1039/D4QO01517G",
+      "journalUrl": "https://www.rsc.org/journals-books-databases/about-journals/organic-chemistry-frontiers/"
+    },
+    {
+      "year": "2024",
+      "title": "Photoredox and Cobalt Co-catalyzed Dehydrogenative Ring-opening/Functionalization of Mono-donor Cyclopropanes",
+      "authors": "Jiyao Zhang, Haohao Huang, Zhijun Zuo*",
+      "journal": "Synlett",
+      "details": "DOI: 10.1055/a-2342-8284.",
+      "tocColor": "gold",
+      "doiUrl": "https://doi.org/10.1055/a-2342-8284",
+      "journalUrl": "https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00000083"
+    },
+    {
+      "year": "2024",
+      "title": "Cooperative Photoredox and Cobalt-catalyzed Acceptorless Dehydrogenative Functionalization of Cyclopropylamides towards Allylic N,O-Acyl-acetal Derivatives",
+      "authors": "Haohao Huang, Xinjun Luan*, Zhijun Zuo*",
+      "journal": "Angew. Chem., Int. Ed.",
+      "details": "63, e202401579.",
+      "tocColor": "blue",
+      "doiUrl": "https://doi.org/10.1002/anie.202401579",
+      "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/anie.202401579"
+    },
+    {
+      "year": "2024",
+      "title": "Highly Selective 1,4-Diacylation/Cycloisomerization of 1,3-Enynes: De Novo Synthetic Strategy to Polysubstituted Furans",
+      "authors": "Yu Sun, Na Zhang, Jingyun Ren, Haohao Huang, Xinjun Luan*, Zhijun Zuo*",
+      "journal": "Org. Lett.",
+      "details": "26, 35.",
+      "tocColor": "teal",
+      "doiUrl": "https://doi.org/10.1021/acs.orglett.3c03450",
+      "journalUrl": "https://pubs.acs.org/doi/10.1021/acs.orglett.3c03450"
+    }
+  ],
+  "prior": [
+    {
+      "title": "1,3-Oxyalkynylation of Aryl Cyclopropanes with Ethynylbenziodoxolones Using Photoredox Catalysis.",
+      "authors": "Zhijun Zuo, Armido Studer*.",
+      "journal": "Org. Lett.",
+      "year": "2022",
+      "details": "24, 949."
+    },
+    {
+      "title": "Cooperative NHC/Photoredox Catalyzed Ring-Opening of Aryl Cyclopropanes to 1-Aroyloxylated-3-Acylated Alkanes.",
+      "authors": "Zhijun Zuo, Constantin G. Daniliuc, Armido Studer*.",
+      "journal": "Angew. Chem., Int. Ed.",
+      "year": "2021",
+      "details": "60, 25456."
+    },
+    {
+      "title": "Regiodivergent Synthesis of Spirocyclic Compounds through Pd-Catalyzed Regio- and Enantioselective [3+2] Spiroannulation.",
+      "authors": "Barry M. Trost*, Zhijun Zuo.",
+      "journal": "Angew. Chem., Int. Ed.",
+      "year": "2021",
+      "details": "60, 5806."
+    },
+    {
+      "title": "Pd(0)-Catalyzed Diastereo- and Enantioselective Intermolecular Cycloaddition for Rapid Assembly of 2-Acyl-methylenecyclopentanes.",
+      "authors": "Barry M. Trost*, Zhijun Zuo, Youliang Wang.",
+      "journal": "Org. Lett.",
+      "year": "2021",
+      "details": "23, 979."
+    },
+    {
+      "title": "Transition-Metal-Catalyzed Cycloaddition Reactions to Access Seven-Membered Rings.",
+      "authors": "Barry M. Trost*, Zhijun Zuo, Johnathan E. Schultz.",
+      "journal": "Chem. Eur. J.",
+      "year": "2020",
+      "details": "26, 15354."
+    },
+    {
+      "title": "Pd(0)-Catalyzed Chemo-, Diastereo-, and Enantioselective alpha-Quaternary Alkylation of Branched Aldehydes.",
+      "authors": "Barry M. Trost*, Zhijun Zuo, Youliang Wang, Johnathan E. Schultz.",
+      "journal": "ACS Catal.",
+      "year": "2020",
+      "details": "10, 9496."
+    },
+    {
+      "title": "Highly Regio-, Diastereo-, and Enantioselective Synthesis of Tetrahydroazepines and Benzo[b]oxepines via Palladium-Catalyzed [4+3] Cycloaddition Reactions.",
+      "authors": "Barry M. Trost*, Zhijun Zuo.",
+      "journal": "Angew. Chem., Int. Ed.",
+      "year": "2020",
+      "details": "59, 1243."
+    },
+    {
+      "title": "A Borane-Mediated Palladium-Catalyzed Reductive Allylic Alkylation of alpha,beta-Unsaturated Carbonyl Compounds.",
+      "authors": "Barry M. Trost*, Zhijun Zuo, Johnathan E. Schultz, Nagaraju Anugula, Katherine A. Carr.",
+      "journal": "Chem. Sci.",
+      "year": "2020",
+      "details": "11, 2136."
+    },
+    {
+      "title": "Palladium-Catalyzed [2+2+1] Spiroannulation via Alkyne-Directed Remote C-H Arylation and Subsequent Arene Dearomatization.",
+      "authors": "Zhijun Zuo, Jing Wang, Jingjing Liu*, Yaoyu Wang, Xinjun Luan*.",
+      "journal": "Angew. Chem., Int. Ed.",
+      "year": "2020",
+      "details": "59, 653."
+    },
+    {
+      "title": "Palladium-Catalyzed Aryne Insertion/Arene Dearomatization Domino Reaction: A Highly Chemoselective Route to Spirofluorenes.",
+      "authors": "Zhijun Zuo, Hui Wang, Yunxia Diao, Yicong Ge, Jingjing Liu, Xinjun Luan*.",
+      "journal": "ACS Catal.",
+      "year": "2018",
+      "details": "8, 11029."
+    },
+    {
+      "title": "Modular Assembly of Spirocarbocyclic Scaffolds through Pd0-Catalyzed Intermolecular Dearomatizing [2+2+1] Annulation of Bromonaphthols with Aryl Iodides and Alkynes.",
+      "authors": "Zhijun Zuo, Hui Wang, Liangxin Fan, Jingjing Liu, Yaoyu Wang, Xinjun Luan*.",
+      "journal": "Angew. Chem., Int. Ed.",
+      "year": "2017",
+      "details": "56, 2767."
+    },
+    {
+      "title": "Highly Stereoselective Synthesis of Imine-Containing Dibenzo[b,d]azepines by a Palladium(II)-Catalyzed [5+2] Oxidative Annulation of o-Arylanilines with Alkynes.",
+      "authors": "Zhijun Zuo, Jingjing Liu, Jiang Nan, Liangxin Fan, Wei Sun, Yaoyu Wang, Xinjun Luan*.",
+      "journal": "Angew. Chem., Int. Ed.",
+      "year": "2015",
+      "details": "54, 15385."
+    },
+    {
+      "title": "Ru(II)-Catalyzed Oxidative Spiroannulation of 2-Arylphenols with Alkynes via a C-H Activation/Dearomatization Strategy.",
+      "authors": "Zhijun Zuo, Xin Yang, Jingjing Liu, Jiang Nan, Lu Bai, Yaoyu Wang, Xinjun Luan*.",
+      "journal": "J. Org. Chem.",
+      "year": "2015",
+      "details": "80, 3349."
+    },
+    {
+      "title": "RuII-Catalyzed Vinylative Dearomatization of Naphthols via a C(sp2)-H Bond Activation Approach.",
+      "authors": "Jiang Nan, Zhijun Zuo, Lei Luo, Lu Bai, Huayu Zheng, Yini Yuan, Jingjing Liu, Xinjun Luan*, Yaoyu Wang.",
+      "journal": "J. Am. Chem. Soc.",
+      "year": "2013",
+      "details": "135, 17306."
+    },
+    {
+      "title": "Palladium(0)-catalyzed [2+2+1] Cyclization of 1,6-Enynes with Vinyl Bromides.",
+      "authors": "Yunxia Diao, Zhijun Zuo, Hui Wang, Jingjing Liu*, Xinjun Luan*.",
+      "journal": "Org. Biomol. Chem.",
+      "year": "2017",
+      "details": "15, 4601."
+    },
+    {
+      "title": "Catalytic Enantioselective Tautomerization of Metastable Enamines.",
+      "authors": "Jingjing Liu, Xin Yang, Zhijun Zuo, Jiang Nan, Yaoyu Wang, Xinjun Luan*.",
+      "journal": "Org. Lett.",
+      "year": "2018",
+      "details": "20, 244."
+    },
+    {
+      "title": "Palladium-Catalyzed Decarboxylative Asymmetric Allylic Alkylation of Dihydroquinolinones.",
+      "authors": "Barry M. Trost*, Anugula Nagaraju, Feijun Wang, Zhijun Zuo, Jiayi Xu, Kami L. Hull.",
+      "journal": "Org. Lett.",
+      "year": "2018",
+      "details": "21, 1784."
+    },
+    {
+      "title": "Palladium-Catalyzed Regio-, Enantio- and Diastereoselective Asymmetric [3+2] Cycloaddition Reactions: Synthesis of chiral cyclopentyl phosphonates.",
+      "authors": "Barry M. Trost*, Anand H. Shinde, Youliang Wang, Zhijun Zuo, Chang Min.",
+      "journal": "ACS Catal.",
+      "year": "2020",
+      "details": "10, 1969."
+    },
+    {
+      "title": "Direct Asymmetric Dearomatization of 2-Naphthols by Scandium-Catalyzed Electrophilic Amination.",
+      "authors": "Jiang Nan, Jingjing Liu, Huayu Zheng, Zhijun Zuo, Lei Hou, Huaiming Hu, Yaoyu Wang, Xinjun Luan*.",
+      "journal": "Angew. Chem., Int. Ed.",
+      "year": "2015",
+      "details": "54, 2356."
+    },
+    {
+      "title": "Pd(0)-Catalyzed Chemoselective Construction of Spirocarbocycles via an Alkyne Insertion/beta-Naphthol Dearomatization Cascade.",
+      "authors": "Huayu Zheng, Lu Bai, Jingjing Liu, Jiang Nan, Zhijun Zuo, Liu Yang, Yaoyu Wang, Xinjun Luan*.",
+      "journal": "Chem. Commun.",
+      "year": "2015",
+      "details": "51, 3061."
+    },
+    {
+      "title": "Synthesis and Spectral Properties of Water-Soluble Indocyanine Dyes as well as the Interaction with DNA and BSA.",
+      "authors": "Xiufu Zhang, Yile Fu, Zhijun Zuo, Yuan Hou, Yuexuan Li, Yanxia Liu, Lanying Wang*.",
+      "journal": "Chin. J. Org. Chem.",
+      "year": "2013",
+      "details": "33, 1709."
+    }
+  ]
+}

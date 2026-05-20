@@ -1,0 +1,164 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+site_url: "https://greengyc.github.io/zuo-group/"
+display_url: "https://greengyc.github.io/zuo-group/"
+logo_url: "https://greengyc.github.io/zuo-group/assets/hero-lab.png"
+
+collections:
+  - name: "website_content"
+    label: "Website Content"
+    files:
+      - name: "research"
+        label: "Research"
+        file: "content/research.json"
+        format: "json"
+        fields:
+          - label: "Research directions"
+            name: "topics"
+            widget: "list"
+            summary: "{{fields.number}} {{fields.titleLine1}} {{fields.titleLine2}}"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Title line 1", name: "titleLine1", widget: "string" }
+              - { label: "Title line 2", name: "titleLine2", widget: "string" }
+              - { label: "Description", name: "text", widget: "text" }
+
+      - name: "publications"
+        label: "Publications"
+        file: "content/publications.json"
+        format: "json"
+        fields:
+          - label: "Independent work at NWU"
+            name: "independent"
+            widget: "list"
+            summary: "{{fields.year}} - {{fields.journal}} - {{fields.title}}"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Authors", name: "authors", widget: "text" }
+              - { label: "Journal abbreviation", name: "journal", widget: "string" }
+              - { label: "Volume / page / DOI details", name: "details", widget: "string" }
+              - label: "TOC color"
+                name: "tocColor"
+                widget: "select"
+                required: false
+                options: ["blue", "teal", "red", "gold"]
+              - { label: "DOI URL", name: "doiUrl", widget: "string", required: false }
+              - { label: "DOI label if no DOI URL", name: "doiLabel", widget: "string", required: false }
+              - { label: "Journal URL", name: "journalUrl", widget: "string", required: false }
+          - label: "Prior to NWU"
+            name: "prior"
+            widget: "list"
+            summary: "{{fields.year}} - {{fields.journal}} - {{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Authors", name: "authors", widget: "text" }
+              - { label: "Journal abbreviation", name: "journal", widget: "string" }
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Volume / page details", name: "details", widget: "string" }
+
+      - name: "people"
+        label: "People"
+        file: "content/people.json"
+        format: "json"
+        fields:
+          - label: "People groups"
+            name: "groups"
+            widget: "list"
+            summary: "{{fields.category}}"
+            fields:
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Empty category note", name: "note", widget: "text", required: false }
+              - label: "Members"
+                name: "members"
+                widget: "list"
+                required: false
+                summary: "{{fields.name}} - {{fields.role}}"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Role", name: "role", widget: "string", required: false }
+                  - { label: "Photo", name: "photo", widget: "image", required: false }
+                  - { label: "Featured PI card", name: "featured", widget: "boolean", required: false, default: false }
+                  - label: "Tags"
+                    name: "tags"
+                    widget: "list"
+                    required: false
+                    field: { label: "Tag", name: "tag", widget: "string" }
+                  - { label: "Degree", name: "degree", widget: "string", required: false }
+                  - { label: "Graduation year", name: "year", widget: "string", required: false }
+                  - { label: "Destination", name: "destination", widget: "string", required: false }
+
+      - name: "news"
+        label: "News"
+        file: "content/news.json"
+        format: "json"
+        fields:
+          - label: "News items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.date}} - {{fields.title}}"
+            fields:
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+      - name: "photos"
+        label: "Photos"
+        file: "content/photos.json"
+        format: "json"
+        fields:
+          - label: "Photo tiles"
+            name: "photos"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Large tile", name: "large", widget: "boolean", required: false, default: false }
+
+      - name: "contact"
+        label: "Contact"
+        file: "content/contact.json"
+        format: "json"
+        fields:
+          - label: "Contact rows"
+            name: "rows"
+            widget: "list"
+            summary: "{{fields.label}} - {{fields.value}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                required: false
+                options: ["text", "email"]
+          - label: "Academic profiles"
+            name: "profiles"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Detail", name: "detail", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", required: false }
+              - { label: "Lucide icon name", name: "icon", widget: "string", required: false }
+
+      - name: "facilities"
+        label: "Facilities"
+        file: "content/facilities.json"
+        format: "json"
+        fields:
+          - label: "Facility items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Icon", name: "icon", widget: "string", required: false }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }

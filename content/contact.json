@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "label": "Email",
+      "value": "zuozj@nwu.edu.cn",
+      "type": "email"
+    },
+    {
+      "label": "Office",
+      "value": "Chemistry Building, Room 717"
+    },
+    {
+      "label": "Laboratory",
+      "value": "School of Chemistry and Materials Science, Northwest University"
+    }
+  ],
+  "profiles": [
+    {
+      "label": "University Profile",
+      "detail": "NWU faculty page",
+      "url": "https://faculty.nwu.edu.cn/zuozhijun/en/index.htm",
+      "icon": "building-2"
+    },
+    {
+      "label": "Chinese X-MOL Profile",
+      "detail": "x-mol.com/groups/zuozj",
+      "url": "https://www.x-mol.com/groups/zuozj",
+      "icon": "external-link"
+    },
+    {
+      "label": "Google Scholar",
+      "detail": "Scholar profile",
+      "url": "https://scholar.google.com/citations?user=sj0EVJIAAAAJ",
+      "icon": "graduation-cap"
+    },
+    {
+      "label": "ORCID",
+      "detail": "0000-0002-7838-4003",
+      "url": "https://orcid.org/0000-0002-7838-4003",
+      "icon": "fingerprint"
+    },
+    {
+      "label": "ResearchGate",
+      "detail": "Profile link to be added",
+      "url": "",
+      "icon": "id-card"
+    }
+  ]
+}

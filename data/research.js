@@ -1,0 +1,25 @@
+﻿// Local preview fallback. Edit content/research.json through the website admin.
+window.ZUO_RESEARCH = {
+  "topics": [
+    {
+      "number": "01",
+      "titleLine1": "Photoredox",
+      "titleLine2": "Catalysis",
+      "text": "We use visible light to generate reactive radical intermediates under mild conditions, enabling transformations that are difficult to achieve through conventional polar reactivity."
+    },
+    {
+      "number": "02",
+      "titleLine1": "Radical",
+      "titleLine2": "Chemistry",
+      "text": "Radical reactivity is used to access selective bond construction, cross-coupling, and functionalization modes that complement classical two-electron chemistry."
+    },
+    {
+      "number": "03",
+      "titleLine1": "Asymmetric",
+      "titleLine2": "Metal Catalysis",
+      "text": "The group designs cooperative catalytic systems, with particular interest in first-row transition metals such as cobalt, to control dehydrogenative and difunctionalization processes."
+    }
+  ]
+}
+
+

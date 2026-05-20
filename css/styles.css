@@ -769,6 +769,8 @@ body[data-page="join"] .split-section h2::first-letter {
   background:
     linear-gradient(135deg, rgba(47, 111, 153, 0.1), rgba(158, 47, 50, 0.08)),
     #f8fafb;
+  background-position: center;
+  background-size: cover;
   font-weight: 850;
 }
 

@@ -14,6 +14,20 @@
     return escapeHtml(value).replace(/`/g, "&#96;");
   }
 
+  async function loadJson(path, fallback) {
+    try {
+      const response = await fetch(path, { cache: "no-store" });
+      if (!response.ok) throw new Error(`Unable to load ${path}`);
+      return await response.json();
+    } catch (error) {
+      return fallback;
+    }
+  }
+
+  function refreshIcons() {
+    if (window.lucide) window.lucide.createIcons();
+  }
+
   function publicationLinks(item) {
     const links = [];
 
@@ -30,14 +44,13 @@
     return links.length ? `<div class="pub-links">${links.join("")}</div>` : "";
   }
 
-  function renderPublications() {
-    const data = window.ZUO_PUBLICATIONS;
+  function renderPublications(data) {
     const list = document.querySelector("[data-publication-list]");
     const prior = document.querySelector("[data-prior-publications]");
 
     if (data && list) {
       let currentYear = "";
-      list.innerHTML = data.independent
+      list.innerHTML = (data.independent || [])
         .map((item, index) => {
           const yearHeading = item.year !== currentYear ? `<h3 class="year-heading">${escapeHtml(item.year)}</h3>` : "";
           currentYear = item.year;
@@ -58,18 +71,18 @@
     }
 
     if (data && prior) {
-      prior.innerHTML = data.prior
+      prior.innerHTML = (data.prior || [])
         .map((item) => `<li><strong>${escapeHtml(item.title)}</strong> ${escapeHtml(item.authors)} <em>${escapeHtml(item.journal)}</em> <strong>${escapeHtml(item.year)}</strong>, ${escapeHtml(item.details)}</li>`)
         .join("");
     }
   }
 
-  function renderPeople() {
-    const data = window.ZUO_PEOPLE;
+  function renderPeople(data) {
     const target = document.querySelector("[data-people-list]");
-    if (!data || !target) return;
+    const groups = Array.isArray(data) ? data : data?.groups;
+    if (!groups || !target) return;
 
-    target.innerHTML = data
+    target.innerHTML = groups
       .map((group) => {
         const members = group.members || [];
         const body = members.length
@@ -100,17 +113,103 @@
       .join("");
   }
 
-  function renderNews() {
-    const data = window.ZUO_NEWS;
+  function renderNews(data) {
     const target = document.querySelector("[data-news-list]");
-    if (!data || !target) return;
+    const items = Array.isArray(data) ? data : data?.items;
+    if (!items || !target) return;
 
-    target.innerHTML = data
+    target.innerHTML = items
       .map((item) => `<article><time>${escapeHtml(item.date)}</time><h2>${escapeHtml(item.title)}</h2><p>${escapeHtml(item.text)}</p></article>`)
       .join("");
   }
 
-  renderPublications();
-  renderPeople();
-  renderNews();
+  function renderResearch(data) {
+    const target = document.querySelector("[data-research-list]");
+    if (!data?.topics || !target) return;
+
+    target.innerHTML = data.topics
+      .map((topic) => `<article class="research-feature">
+        <span class="card-number">${escapeHtml(topic.number)}</span>
+        <h2>${escapeHtml(topic.titleLine1)}<br />${escapeHtml(topic.titleLine2)}</h2>
+        <p>${escapeHtml(topic.text)}</p>
+      </article>`)
+      .join("");
+  }
+
+  function renderContact(data) {
+    const rowsTarget = document.querySelector("[data-contact-rows]");
+    const profilesTarget = document.querySelector("[data-contact-profiles]");
+    if (!data) return;
+
+    if (rowsTarget) {
+      rowsTarget.innerHTML = (data.rows || [])
+        .map((row) => {
+          const value = row.type === "email"
+            ? `<a href="mailto:${escapeAttr(row.value)}">${escapeHtml(row.value)}</a>`
+            : `<p>${escapeHtml(row.value)}</p>`;
+          return `<div class="contact-row"><span>${escapeHtml(row.label)}</span>${value}</div>`;
+        })
+        .join("");
+    }
+
+    if (profilesTarget) {
+      profilesTarget.innerHTML = (data.profiles || [])
+        .map((profile) => {
+          const icon = `<i data-lucide="${escapeAttr(profile.icon || "external-link")}"></i>`;
+          const text = `<span><strong>${escapeHtml(profile.label)}</strong><small>${escapeHtml(profile.detail)}</small></span>`;
+          if (!profile.url) return `<article class="profile-link inactive">${icon}${text}</article>`;
+          return `<a class="profile-link" href="${escapeAttr(profile.url)}" target="_blank" rel="noreferrer">${icon}${text}<i data-lucide="arrow-up-right"></i></a>`;
+        })
+        .join("");
+    }
+  }
+
+  function renderPhotos(data) {
+    const target = document.querySelector("[data-photo-list]");
+    if (!data?.photos || !target) return;
+
+    target.innerHTML = data.photos
+      .map((photo) => {
+        const classes = photo.large ? "photo-tile large" : "photo-tile";
+        const image = photo.image ? ` style="background-image: linear-gradient(rgba(16, 24, 32, 0.28), rgba(16, 24, 32, 0.28)), url('${escapeAttr(photo.image)}')"` : "";
+        return `<div class="${classes}"${image}><span>${escapeHtml(photo.title)}</span><small>${escapeHtml(photo.caption)}</small></div>`;
+      })
+      .join("");
+  }
+
+  function renderFacilities(data) {
+    const target = document.querySelector("[data-facility-list]");
+    if (!data?.items || !target) return;
+
+    target.innerHTML = data.items
+      .map((item) => `<article class="info-card"><i data-lucide="${escapeAttr(item.icon || "flask-conical")}"></i><h2>${escapeHtml(item.name)}</h2><p>${escapeHtml(item.description)}</p></article>`)
+      .join("");
+  }
+
+  async function init() {
+    if (document.querySelector("[data-publication-list]")) {
+      renderPublications(await loadJson("content/publications.json", window.ZUO_PUBLICATIONS));
+    }
+    if (document.querySelector("[data-people-list]")) {
+      renderPeople(await loadJson("content/people.json", window.ZUO_PEOPLE));
+    }
+    if (document.querySelector("[data-news-list]")) {
+      renderNews(await loadJson("content/news.json", window.ZUO_NEWS));
+    }
+    if (document.querySelector("[data-research-list]")) {
+      renderResearch(await loadJson("content/research.json", window.ZUO_RESEARCH));
+    }
+    if (document.querySelector("[data-contact-rows]") || document.querySelector("[data-contact-profiles]")) {
+      renderContact(await loadJson("content/contact.json", window.ZUO_CONTACT));
+    }
+    if (document.querySelector("[data-photo-list]")) {
+      renderPhotos(await loadJson("content/photos.json", window.ZUO_PHOTOS));
+    }
+    if (document.querySelector("[data-facility-list]")) {
+      renderFacilities(await loadJson("content/facilities.json", window.ZUO_FACILITIES));
+    }
+    refreshIcons();
+  }
+
+  init();
 })();
