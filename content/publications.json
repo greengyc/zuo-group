@@ -1,6 +1,29 @@
 {
+  "hero": {
+    "show": true,
+    "eyebrow": "Publications",
+    "title": "Zhijun Zuo Research Group",
+    "subtitle": "Photoredox, radical, and asymmetric metal catalysis in synthesis.",
+    "backgroundImage": "assets/hero-lab.png",
+    "titleSize": "normal",
+    "textAlignment": "left",
+    "buttons": []
+  },
+  "sections": {
+    "independent": {
+      "show": true,
+      "eyebrow": "Independent Work at NWU",
+      "title": "Northwest University"
+    },
+    "prior": {
+      "show": true,
+      "eyebrow": "Prior to NWU",
+      "title": "Selected earlier work"
+    }
+  },
   "independent": [
     {
+      "visible": true,
       "year": "2026",
       "title": "Photoredox-catalyzed Chem- and Stereoselective Thiosulfonylation of Cyclopropylamides",
       "authors": "Lebin Qian, Yi Wang, Lei Zhu, Xiaotian Qi, Xinjun Luan, Zhijun Zuo*",
@@ -11,6 +34,7 @@
       "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/journal/15213773"
     },
     {
+      "visible": true,
       "year": "2026",
       "title": "Photoinduced Selective Hydrodefluorination of Trifluoromethylarenes Enabled by Base-Activated Hantzsch Esters",
       "authors": "Yuxiang Zhang, Xinyue Ma, Wei Sun, and Zhijun Zuo*",
@@ -21,6 +45,7 @@
       "journalUrl": "https://pubs.acs.org/doi/10.1021/acs.orglett.6c01178"
     },
     {
+      "visible": true,
       "year": "2025",
       "title": "Organophotoredox and Cobalt-catalyzed 1,2-Difunctionalization of Mono-donor Cyclopropanes",
       "authors": "Jinrong Du, Jiale Li, Lebin Qian, Xinjun Luan*, Zhijun Zuo*",
@@ -31,6 +56,7 @@
       "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/anie.202515761"
     },
     {
+      "visible": true,
       "year": "2025",
       "title": "Modular Synthetic Platform for Diverse Substituted Benzylamines through Selective Amide-Aldehyde-Aldehyde Cross-Cyclization Reaction",
       "authors": "Haonan Wei, Haohao Huang, Heiyan Liu, Zhijun Zuo*",
@@ -41,6 +67,7 @@
       "journalUrl": "https://www.sciencedirect.com/journal/green-synthesis-and-catalysis"
     },
     {
+      "visible": true,
       "year": "2025",
       "title": "Photoinduced Cross-Coupling of Trifluoromethylarenes with Heteroarenes via Unactivated C(sp3)-F and C(sp2)-H Selective Cleavage",
       "authors": "Jiyao Zhang, Yuxiang Zhang, Lebin Qian, Zhijun Zuo*",
@@ -51,6 +78,7 @@
       "journalUrl": "https://pubs.acs.org/journal/orlef7"
     },
     {
+      "visible": true,
       "year": "2024",
       "title": "Metal-Free Photoinduced-Radical Hydrocyclization of 2-Isocyanides: A Unified Synthetic Approach to Facilely Assemble Diverse N-Heteroarenes",
       "authors": "Ziyi Wang, Haonan Wei, Jingrong Du, Zhijun Zuo*",
@@ -61,6 +89,7 @@
       "journalUrl": "https://www.rsc.org/journals-books-databases/about-journals/green-chemistry/"
     },
     {
+      "visible": true,
       "year": "2024",
       "title": "Carbonate-Assisted Selectively Deoxygenative Cross-Coupling Reaction between Aryl and Aliphatic Aldehydes: A Straightforward Route to Access alpha-Alkylated Aryl Ketones",
       "authors": "Yu Sun, Yi Wang, Zhijun Zuo*",
@@ -71,6 +100,7 @@
       "journalUrl": "https://www.rsc.org/journals-books-databases/about-journals/organic-chemistry-frontiers/"
     },
     {
+      "visible": true,
       "year": "2024",
       "title": "Photoredox and Cobalt Co-catalyzed Dehydrogenative Ring-opening/Functionalization of Mono-donor Cyclopropanes",
       "authors": "Jiyao Zhang, Haohao Huang, Zhijun Zuo*",
@@ -81,6 +111,7 @@
       "journalUrl": "https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00000083"
     },
     {
+      "visible": true,
       "year": "2024",
       "title": "Cooperative Photoredox and Cobalt-catalyzed Acceptorless Dehydrogenative Functionalization of Cyclopropylamides towards Allylic N,O-Acyl-acetal Derivatives",
       "authors": "Haohao Huang, Xinjun Luan*, Zhijun Zuo*",
@@ -91,6 +122,7 @@
       "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/anie.202401579"
     },
     {
+      "visible": true,
       "year": "2024",
       "title": "Highly Selective 1,4-Diacylation/Cycloisomerization of 1,3-Enynes: De Novo Synthetic Strategy to Polysubstituted Furans",
       "authors": "Yu Sun, Na Zhang, Jingyun Ren, Haohao Huang, Xinjun Luan*, Zhijun Zuo*",

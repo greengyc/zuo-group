@@ -13,16 +13,186 @@ collections:
   - name: "website_content"
     label: "Website Content"
     files:
+      - name: "site"
+        label: "Site Settings"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Brand in the top-left header"
+            name: "brand"
+            widget: "object"
+            fields:
+              - { label: "Group name", name: "groupName", widget: "string" }
+              - { label: "Small subtitle under group name", name: "subtitle", widget: "string" }
+              - { label: "Home link", name: "homeUrl", widget: "string", default: "index.html" }
+              - { label: "Logo image", name: "logoImage", widget: "image", required: false }
+          - label: "Theme colors"
+            name: "theme"
+            widget: "object"
+            fields:
+              - { label: "Main red color", name: "primaryColor", widget: "string", default: "#9e2f32" }
+              - { label: "Darker red color", name: "primaryDarkColor", widget: "string", default: "#762325" }
+          - label: "Top navigation menu"
+            name: "navigation"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Show this menu item", name: "visible", widget: "boolean", required: false, default: true }
+              - { label: "Page key", name: "pageKey", widget: "string" }
+              - { label: "Menu text", name: "label", widget: "string" }
+              - { label: "Menu link", name: "url", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Footer group name", name: "groupName", widget: "string" }
+              - { label: "Footer affiliation line", name: "affiliation", widget: "string" }
+              - label: "Footer links"
+                name: "links"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show this link", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Link text", name: "label", widget: "string" }
+                  - { label: "Link URL", name: "url", widget: "string" }
+
+      - name: "home"
+        label: "Home"
+        file: "content/home.json"
+        format: "json"
+        fields:
+          - label: "Google / browser title information"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Browser title", name: "title", widget: "string" }
+              - { label: "Google description", name: "description", widget: "text" }
+              - { label: "Search keywords", name: "keywords", widget: "text" }
+          - label: "Homepage hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Show this section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Background image", name: "backgroundImage", widget: "image", required: false }
+              - { label: "Small label", name: "eyebrow", widget: "string" }
+              - { label: "Large title", name: "title", widget: "string" }
+              - { label: "Statement line", name: "statement", widget: "text" }
+              - { label: "Description line", name: "copy", widget: "text" }
+              - label: "Text alignment"
+                name: "textAlignment"
+                widget: "select"
+                default: "left"
+                options: ["left", "center"]
+              - label: "Hero buttons"
+                name: "buttons"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show this button", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Button text", name: "label", widget: "string" }
+                  - { label: "Button link", name: "url", widget: "string" }
+                  - { label: "Icon name, optional", name: "icon", widget: "string", required: false }
+                  - label: "Button style"
+                    name: "style"
+                    widget: "select"
+                    default: "primary"
+                    options: ["primary", "ghost"]
+          - label: "Optional metric strip"
+            name: "metrics"
+            widget: "object"
+            fields:
+              - { label: "Show metric strip", name: "show", widget: "boolean", required: false, default: false }
+              - label: "Metrics"
+                name: "items"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show this metric", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Small label", name: "label", widget: "string" }
+                  - { label: "Large value", name: "value", widget: "string" }
+          - label: "Research focus section"
+            name: "focus"
+            widget: "object"
+            fields:
+              - { label: "Show this section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image description", name: "imageAlt", widget: "string", required: false }
+              - { label: "Main text", name: "text", widget: "text" }
+              - { label: "Link text", name: "linkLabel", widget: "string", required: false }
+              - { label: "Link URL", name: "linkUrl", widget: "string", required: false }
+          - label: "Homepage guide cards"
+            name: "guide"
+            widget: "object"
+            fields:
+              - { label: "Show this section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Section title", name: "title", widget: "string" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                summary: "{{fields.number}} {{fields.title}}"
+                fields:
+                  - { label: "Show this card", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Number", name: "number", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Link URL", name: "url", widget: "string" }
+          - label: "Recruiting band"
+            name: "joinBand"
+            widget: "object"
+            fields:
+              - { label: "Show this section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small label", name: "eyebrow", widget: "string" }
+              - { label: "Large text", name: "title", widget: "text" }
+              - { label: "Button text", name: "buttonLabel", widget: "string", required: false }
+              - { label: "Button link", name: "buttonUrl", widget: "string", required: false }
+              - { label: "Button icon", name: "buttonIcon", widget: "string", required: false }
+
       - name: "research"
         label: "Research"
         file: "content/research.json"
         format: "json"
         fields:
-          - label: "Research directions"
+          - label: "Top title section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Show this top section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Large title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Background image", name: "backgroundImage", widget: "image", required: false }
+              - label: "Title size"
+                name: "titleSize"
+                widget: "select"
+                default: "normal"
+                options: ["compact", "normal", "large"]
+              - label: "Text alignment"
+                name: "textAlignment"
+                widget: "select"
+                default: "left"
+                options: ["left", "center"]
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show this button", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Button text", name: "label", widget: "string" }
+                  - { label: "Button link", name: "url", widget: "string" }
+                  - { label: "Icon name, optional", name: "icon", widget: "string", required: false }
+                  - { label: "Button style", name: "style", widget: "select", default: "primary", options: ["primary", "ghost"] }
+          - label: "Research direction cards"
             name: "topics"
             widget: "list"
             summary: "{{fields.number}} {{fields.titleLine1}} {{fields.titleLine2}}"
             fields:
+              - { label: "Show this card", name: "visible", widget: "boolean", required: false, default: true }
               - { label: "Number", name: "number", widget: "string" }
               - { label: "Title line 1", name: "titleLine1", widget: "string" }
               - { label: "Title line 2", name: "titleLine2", widget: "string" }
@@ -33,21 +203,60 @@ collections:
         file: "content/publications.json"
         format: "json"
         fields:
+          - label: "Top title section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Show this top section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Large title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Background image", name: "backgroundImage", widget: "image", required: false }
+              - { label: "Title size", name: "titleSize", widget: "select", default: "normal", options: ["compact", "normal", "large"] }
+              - { label: "Text alignment", name: "textAlignment", widget: "select", default: "left", options: ["left", "center"] }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show this button", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Button text", name: "label", widget: "string" }
+                  - { label: "Button link", name: "url", widget: "string" }
+                  - { label: "Icon name, optional", name: "icon", widget: "string", required: false }
+                  - { label: "Button style", name: "style", widget: "select", default: "primary", options: ["primary", "ghost"] }
+          - label: "Section headings"
+            name: "sections"
+            widget: "object"
+            fields:
+              - label: "Independent work section"
+                name: "independent"
+                widget: "object"
+                fields:
+                  - { label: "Show this section", name: "show", widget: "boolean", required: false, default: true }
+                  - { label: "Small red label", name: "eyebrow", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+              - label: "Prior work section"
+                name: "prior"
+                widget: "object"
+                fields:
+                  - { label: "Show this section", name: "show", widget: "boolean", required: false, default: true }
+                  - { label: "Small red label", name: "eyebrow", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
           - label: "Independent work at NWU"
             name: "independent"
             widget: "list"
             summary: "{{fields.year}} - {{fields.journal}} - {{fields.title}}"
             fields:
+              - { label: "Show this paper", name: "visible", widget: "boolean", required: false, default: true }
               - { label: "Year", name: "year", widget: "string" }
               - { label: "Title", name: "title", widget: "text" }
               - { label: "Authors", name: "authors", widget: "text" }
               - { label: "Journal abbreviation", name: "journal", widget: "string" }
               - { label: "Volume / page / DOI details", name: "details", widget: "string" }
-              - label: "TOC color"
-                name: "tocColor"
-                widget: "select"
-                required: false
-                options: ["blue", "teal", "red", "gold"]
+              - { label: "TOC image", name: "tocImage", widget: "image", required: false }
+              - { label: "TOC placeholder text", name: "tocLabel", widget: "string", required: false, default: "TOC pending" }
+              - { label: "TOC placeholder color", name: "tocColor", widget: "select", required: false, options: ["blue", "teal", "red", "gold"] }
               - { label: "DOI URL", name: "doiUrl", widget: "string", required: false }
               - { label: "DOI label if no DOI URL", name: "doiLabel", widget: "string", required: false }
               - { label: "Journal URL", name: "journalUrl", widget: "string", required: false }
@@ -56,6 +265,7 @@ collections:
             widget: "list"
             summary: "{{fields.year}} - {{fields.journal}} - {{fields.title}}"
             fields:
+              - { label: "Show this paper", name: "visible", widget: "boolean", required: false, default: true }
               - { label: "Title", name: "title", widget: "text" }
               - { label: "Authors", name: "authors", widget: "text" }
               - { label: "Journal abbreviation", name: "journal", widget: "string" }
@@ -67,11 +277,34 @@ collections:
         file: "content/people.json"
         format: "json"
         fields:
+          - label: "Top title section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Show this top section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Large title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Background image", name: "backgroundImage", widget: "image", required: false }
+              - { label: "Title size", name: "titleSize", widget: "select", default: "normal", options: ["compact", "normal", "large"] }
+              - { label: "Text alignment", name: "textAlignment", widget: "select", default: "left", options: ["left", "center"] }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show this button", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Button text", name: "label", widget: "string" }
+                  - { label: "Button link", name: "url", widget: "string" }
+                  - { label: "Icon name, optional", name: "icon", widget: "string", required: false }
+                  - { label: "Button style", name: "style", widget: "select", default: "primary", options: ["primary", "ghost"] }
           - label: "People groups"
             name: "groups"
             widget: "list"
             summary: "{{fields.category}}"
             fields:
+              - { label: "Show this group", name: "visible", widget: "boolean", required: false, default: true }
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Empty category note", name: "note", widget: "text", required: false }
               - label: "Members"
@@ -80,6 +313,7 @@ collections:
                 required: false
                 summary: "{{fields.name}} - {{fields.role}}"
                 fields:
+                  - { label: "Show this person", name: "visible", widget: "boolean", required: false, default: true }
                   - { label: "Name", name: "name", widget: "string" }
                   - { label: "Role", name: "role", widget: "string", required: false }
                   - { label: "Photo", name: "photo", widget: "image", required: false }
@@ -107,30 +341,19 @@ collections:
               - { label: "Large title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "text" }
               - { label: "Background image", name: "backgroundImage", widget: "image", required: false }
-              - label: "Title size"
-                name: "titleSize"
-                widget: "select"
-                default: "normal"
-                options: ["compact", "normal", "large"]
-              - label: "Text alignment"
-                name: "textAlignment"
-                widget: "select"
-                default: "left"
-                options: ["left", "center"]
+              - { label: "Title size", name: "titleSize", widget: "select", default: "normal", options: ["compact", "normal", "large"] }
+              - { label: "Text alignment", name: "textAlignment", widget: "select", default: "left", options: ["left", "center"] }
               - label: "Hero buttons"
                 name: "buttons"
                 widget: "list"
                 required: false
                 summary: "{{fields.label}}"
                 fields:
+                  - { label: "Show this button", name: "visible", widget: "boolean", required: false, default: true }
                   - { label: "Button text", name: "label", widget: "string" }
                   - { label: "Button link", name: "url", widget: "string" }
-                  - label: "Button style"
-                    name: "style"
-                    widget: "select"
-                    required: false
-                    default: "primary"
-                    options: ["primary", "ghost"]
+                  - { label: "Icon name, optional", name: "icon", widget: "string", required: false }
+                  - { label: "Button style", name: "style", widget: "select", required: false, default: "primary", options: ["primary", "ghost"] }
           - label: "Editable content blocks"
             name: "blocks"
             widget: "list"
@@ -138,22 +361,14 @@ collections:
             summary: "{{fields.type}} - {{fields.title}}"
             fields:
               - { label: "Show this block", name: "visible", widget: "boolean", required: false, default: true }
-              - label: "Block type"
-                name: "type"
-                widget: "select"
-                default: "text"
-                options: ["text", "image", "button"]
+              - { label: "Block type", name: "type", widget: "select", default: "text", options: ["text", "image", "button"] }
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Text", name: "text", widget: "text", required: false }
               - { label: "Image", name: "image", widget: "image", required: false }
               - { label: "Button text", name: "buttonLabel", widget: "string", required: false }
               - { label: "Button link", name: "buttonUrl", widget: "string", required: false }
-              - label: "Button style"
-                name: "buttonStyle"
-                widget: "select"
-                required: false
-                default: "primary"
-                options: ["primary", "ghost"]
+              - { label: "Button icon", name: "buttonIcon", widget: "string", required: false }
+              - { label: "Button style", name: "buttonStyle", widget: "select", required: false, default: "primary", options: ["primary", "ghost"] }
           - label: "News items"
             name: "items"
             widget: "list"
@@ -166,65 +381,237 @@ collections:
               - { label: "Image", name: "image", widget: "image", required: false }
               - { label: "Button text", name: "buttonLabel", widget: "string", required: false }
               - { label: "Button link", name: "buttonUrl", widget: "string", required: false }
-              - label: "Button style"
-                name: "buttonStyle"
-                widget: "select"
-                required: false
-                default: "primary"
-                options: ["primary", "ghost"]
+              - { label: "Button icon", name: "buttonIcon", widget: "string", required: false }
+              - { label: "Button style", name: "buttonStyle", widget: "select", required: false, default: "primary", options: ["primary", "ghost"] }
 
       - name: "photos"
         label: "Photos"
         file: "content/photos.json"
         format: "json"
         fields:
+          - label: "Top title section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Show this top section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Large title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Background image", name: "backgroundImage", widget: "image", required: false }
+              - { label: "Title size", name: "titleSize", widget: "select", default: "normal", options: ["compact", "normal", "large"] }
+              - { label: "Text alignment", name: "textAlignment", widget: "select", default: "left", options: ["left", "center"] }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show this button", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Button text", name: "label", widget: "string" }
+                  - { label: "Button link", name: "url", widget: "string" }
+                  - { label: "Icon name, optional", name: "icon", widget: "string", required: false }
+                  - { label: "Button style", name: "style", widget: "select", default: "primary", options: ["primary", "ghost"] }
           - label: "Photo tiles"
             name: "photos"
             widget: "list"
             summary: "{{fields.title}}"
             fields:
+              - { label: "Show this photo tile", name: "visible", widget: "boolean", required: false, default: true }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Caption", name: "caption", widget: "string", required: false }
               - { label: "Image", name: "image", widget: "image", required: false }
               - { label: "Large tile", name: "large", widget: "boolean", required: false, default: false }
 
-      - name: "contact"
-        label: "Contact"
-        file: "content/contact.json"
+      - name: "resources"
+        label: "Resources"
+        file: "content/resources.json"
         format: "json"
         fields:
-          - label: "Contact rows"
-            name: "rows"
-            widget: "list"
-            summary: "{{fields.label}} - {{fields.value}}"
+          - label: "Top title section"
+            name: "hero"
+            widget: "object"
             fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "Value", name: "value", widget: "string" }
-              - label: "Type"
-                name: "type"
-                widget: "select"
+              - { label: "Show this top section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Large title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Background image", name: "backgroundImage", widget: "image", required: false }
+              - { label: "Title size", name: "titleSize", widget: "select", default: "normal", options: ["compact", "normal", "large"] }
+              - { label: "Text alignment", name: "textAlignment", widget: "select", default: "left", options: ["left", "center"] }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
                 required: false
-                options: ["text", "email"]
-          - label: "Academic profiles"
-            name: "profiles"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show this button", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Button text", name: "label", widget: "string" }
+                  - { label: "Button link", name: "url", widget: "string" }
+                  - { label: "Icon name, optional", name: "icon", widget: "string", required: false }
+                  - { label: "Button style", name: "style", widget: "select", default: "primary", options: ["primary", "ghost"] }
+          - label: "Resource cards"
+            name: "items"
             widget: "list"
-            summary: "{{fields.label}}"
+            summary: "{{fields.title}}"
             fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "Detail", name: "detail", widget: "string" }
-              - { label: "URL", name: "url", widget: "string", required: false }
-              - { label: "Lucide icon name", name: "icon", widget: "string", required: false }
+              - { label: "Show this card", name: "visible", widget: "boolean", required: false, default: true }
+              - { label: "Icon name", name: "icon", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button text", name: "buttonLabel", widget: "string", required: false }
+              - { label: "Button link", name: "buttonUrl", widget: "string", required: false }
+              - { label: "Button icon", name: "buttonIcon", widget: "string", required: false }
+              - { label: "Button style", name: "buttonStyle", widget: "select", required: false, default: "primary", options: ["primary", "ghost"] }
 
       - name: "facilities"
         label: "Facilities"
         file: "content/facilities.json"
         format: "json"
         fields:
+          - label: "Top title section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Show this top section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Large title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Background image", name: "backgroundImage", widget: "image", required: false }
+              - { label: "Title size", name: "titleSize", widget: "select", default: "normal", options: ["compact", "normal", "large"] }
+              - { label: "Text alignment", name: "textAlignment", widget: "select", default: "left", options: ["left", "center"] }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show this button", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Button text", name: "label", widget: "string" }
+                  - { label: "Button link", name: "url", widget: "string" }
+                  - { label: "Icon name, optional", name: "icon", widget: "string", required: false }
+                  - { label: "Button style", name: "style", widget: "select", default: "primary", options: ["primary", "ghost"] }
           - label: "Facility items"
             name: "items"
             widget: "list"
             summary: "{{fields.name}}"
             fields:
-              - { label: "Icon", name: "icon", widget: "string", required: false }
+              - { label: "Show this card", name: "visible", widget: "boolean", required: false, default: true }
+              - { label: "Icon name", name: "icon", widget: "string", required: false }
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Button text", name: "buttonLabel", widget: "string", required: false }
+              - { label: "Button link", name: "buttonUrl", widget: "string", required: false }
+              - { label: "Button icon", name: "buttonIcon", widget: "string", required: false }
+              - { label: "Button style", name: "buttonStyle", widget: "select", required: false, default: "primary", options: ["primary", "ghost"] }
+
+      - name: "join"
+        label: "Join Us"
+        file: "content/join.json"
+        format: "json"
+        fields:
+          - label: "Top title section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Show this top section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Large title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Background image", name: "backgroundImage", widget: "image", required: false }
+              - { label: "Title size", name: "titleSize", widget: "select", default: "normal", options: ["compact", "normal", "large"] }
+              - { label: "Text alignment", name: "textAlignment", widget: "select", default: "left", options: ["left", "center"] }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show this button", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Button text", name: "label", widget: "string" }
+                  - { label: "Button link", name: "url", widget: "string" }
+                  - { label: "Icon name, optional", name: "icon", widget: "string", required: false }
+                  - { label: "Button style", name: "style", widget: "select", default: "primary", options: ["primary", "ghost"] }
+          - label: "Main recruiting text section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Show this section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Large heading", name: "title", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Button text", name: "buttonLabel", widget: "string", required: false }
+              - { label: "Button link", name: "buttonUrl", widget: "string", required: false }
+              - { label: "Button icon", name: "buttonIcon", widget: "string", required: false }
+          - label: "Additional editable blocks"
+            name: "blocks"
+            widget: "list"
+            required: false
+            summary: "{{fields.type}} - {{fields.title}}"
+            fields:
+              - { label: "Show this block", name: "visible", widget: "boolean", required: false, default: true }
+              - { label: "Block type", name: "type", widget: "select", default: "text", options: ["text", "image", "button"] }
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Text", name: "text", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Button text", name: "buttonLabel", widget: "string", required: false }
+              - { label: "Button link", name: "buttonUrl", widget: "string", required: false }
+              - { label: "Button icon", name: "buttonIcon", widget: "string", required: false }
+              - { label: "Button style", name: "buttonStyle", widget: "select", required: false, default: "primary", options: ["primary", "ghost"] }
+
+      - name: "contact"
+        label: "Contact"
+        file: "content/contact.json"
+        format: "json"
+        fields:
+          - label: "Top title section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Show this top section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Large title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Background image", name: "backgroundImage", widget: "image", required: false }
+              - { label: "Title size", name: "titleSize", widget: "select", default: "normal", options: ["compact", "normal", "large"] }
+              - { label: "Text alignment", name: "textAlignment", widget: "select", default: "left", options: ["left", "center"] }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show this button", name: "visible", widget: "boolean", required: false, default: true }
+                  - { label: "Button text", name: "label", widget: "string" }
+                  - { label: "Button link", name: "url", widget: "string" }
+                  - { label: "Icon name, optional", name: "icon", widget: "string", required: false }
+                  - { label: "Button style", name: "style", widget: "select", default: "primary", options: ["primary", "ghost"] }
+          - label: "Contact page section heading"
+            name: "section"
+            widget: "object"
+            fields:
+              - { label: "Show contact section", name: "show", widget: "boolean", required: false, default: true }
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+          - label: "Contact rows"
+            name: "rows"
+            widget: "list"
+            summary: "{{fields.label}} - {{fields.value}}"
+            fields:
+              - { label: "Show this row", name: "visible", widget: "boolean", required: false, default: true }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Type", name: "type", widget: "select", required: false, options: ["text", "email"] }
+          - label: "Academic profiles"
+            name: "profiles"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Show this profile", name: "visible", widget: "boolean", required: false, default: true }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Detail", name: "detail", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", required: false }
+              - { label: "Icon name", name: "icon", widget: "string", required: false }

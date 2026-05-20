@@ -43,21 +43,22 @@
     </header>
 
     <main>
-      <section class="home-hero">
+      <section class="home-hero" data-home-hero>
         <img
           class="hero-media"
+          data-home-hero-image
           src="assets/hero-lab.png"
           alt="Modern organic synthesis laboratory"
         />
         <div class="hero-overlay"></div>
         <div class="hero-inner">
-          <p class="eyebrow light">Organic Synthesis Methodology</p>
-          <h1>Zhijun Zuo Research Group</h1>
-          <p class="hero-statement">Photoredox, radical, and asymmetric metal catalysis in synthesis.</p>
-          <p class="hero-copy">
+          <p class="eyebrow light" data-home-hero-eyebrow>Organic Synthesis Methodology</p>
+          <h1 data-home-hero-title>Zhijun Zuo Research Group</h1>
+          <p class="hero-statement" data-home-hero-statement>Photoredox, radical, and asymmetric metal catalysis in synthesis.</p>
+          <p class="hero-copy" data-home-hero-copy>
             We develop new catalytic strategies for selective bond formation in organic synthesis.
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions" data-home-hero-actions>
             <a class="button primary" href="research.html">
               <i data-lucide="flask-conical"></i>
               Research
@@ -70,28 +71,30 @@
         </div>
       </section>
 
-      <section class="section split-section">
+      <section class="metric-strip" data-home-metrics hidden></section>
+
+      <section class="section split-section" data-home-focus>
         <div class="section-kicker">
-          <p class="eyebrow">Research Focus</p>
-          <img class="research-focus-image" src="assets/research-focus.svg" alt="Visible-light-promoted activation of inert C-H, C-C, and C-F bonds" />
+          <p class="eyebrow" data-home-focus-eyebrow>Research Focus</p>
+          <img class="research-focus-image" data-home-focus-image src="assets/research-focus.svg" alt="Visible-light-promoted activation of inert C-H, C-C, and C-F bonds" />
         </div>
         <div class="lead-text">
-          <p>
+          <p data-home-focus-text>
             The group develops visible-light-promoted catalytic strategies for the activation and
             transformation of inert C-H, C-C, and C-F bonds. These studies combine photoredox
             catalysis, radical chemistry, and asymmetric metal catalysis to enable selective bond
             construction under mild conditions.
           </p>
-          <a class="text-link" href="research.html">View research directions</a>
+          <a class="text-link" data-home-focus-link href="research.html">View research directions</a>
         </div>
       </section>
 
-      <section class="section cards-section">
+      <section class="section cards-section" data-home-guide>
         <div class="section-heading">
-          <p class="eyebrow">Website Guide</p>
-          <h2>Start here</h2>
+          <p class="eyebrow" data-home-guide-eyebrow>Website Guide</p>
+          <h2 data-home-guide-title>Start here</h2>
         </div>
-        <div class="card-grid four">
+        <div class="card-grid four" data-home-guide-cards>
           <a class="nav-card" href="research.html">
             <span>01</span>
             <h3>Research</h3>
@@ -115,12 +118,12 @@
         </div>
       </section>
 
-      <section class="section join-band">
+      <section class="section join-band" data-home-join>
         <div>
-          <p class="eyebrow light">Recruiting</p>
-          <h2>We welcome motivated postdoctoral fellows, graduate students, and undergraduate researchers.</h2>
+          <p class="eyebrow light" data-home-join-eyebrow>Recruiting</p>
+          <h2 data-home-join-title>We welcome motivated postdoctoral fellows, graduate students, and undergraduate researchers.</h2>
         </div>
-        <a class="button primary" href="join.html">
+        <a class="button primary" data-home-join-button href="join.html">
           <i data-lucide="arrow-right"></i>
           Open Positions
         </a>
@@ -172,6 +175,9 @@
       }
     </script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="data/site.js"></script>
+    <script src="data/home.js"></script>
+    <script src="js/content-renderer.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

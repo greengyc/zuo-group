@@ -1,0 +1,57 @@
+{
+  "seo": {
+    "title": "Zuo Group | Zhijun Zuo Research Group | Northwest University Organic Chemistry",
+    "description": "Zuo Group at Northwest University develops new catalytic strategies for selective bond formation in organic synthesis, with interests in photoredox catalysis, radical chemistry, and asymmetric metal catalysis.",
+    "keywords": "Zhijun Zuo, Zuo Group, Northwest University organic chemistry, photoredox catalysis, radical chemistry, asymmetric metal catalysis, organic synthesis methodology"
+  },
+  "hero": {
+    "show": true,
+    "backgroundImage": "assets/hero-lab.png",
+    "eyebrow": "Organic Synthesis Methodology",
+    "title": "Zhijun Zuo Research Group",
+    "statement": "Photoredox, radical, and asymmetric metal catalysis in synthesis.",
+    "copy": "We develop new catalytic strategies for selective bond formation in organic synthesis.",
+    "textAlignment": "left",
+    "buttons": [
+      { "visible": true, "label": "Research", "url": "research.html", "style": "primary", "icon": "flask-conical" },
+      { "visible": true, "label": "Join Us", "url": "join.html", "style": "ghost", "icon": "user-plus" }
+    ]
+  },
+  "metrics": {
+    "show": false,
+    "items": [
+      { "visible": true, "label": "Focus", "value": "Organic synthesis methodology" },
+      { "visible": true, "label": "Location", "value": "Xi'an, China" },
+      { "visible": true, "label": "Institution", "value": "Northwest University" },
+      { "visible": true, "label": "Contact", "value": "zuozj@nwu.edu.cn" }
+    ]
+  },
+  "focus": {
+    "show": true,
+    "eyebrow": "Research Focus",
+    "image": "assets/research-focus.svg",
+    "imageAlt": "Visible-light-promoted activation of inert C-H, C-C, and C-F bonds",
+    "text": "The group develops visible-light-promoted catalytic strategies for the activation and transformation of inert C-H, C-C, and C-F bonds. These studies combine photoredox catalysis, radical chemistry, and asymmetric metal catalysis to enable selective bond construction under mild conditions.",
+    "linkLabel": "View research directions",
+    "linkUrl": "research.html"
+  },
+  "guide": {
+    "show": true,
+    "eyebrow": "Website Guide",
+    "title": "Start here",
+    "cards": [
+      { "visible": true, "number": "01", "title": "Research", "text": "Scientific directions and methodology themes.", "url": "research.html" },
+      { "visible": true, "number": "02", "title": "Publications", "text": "Research articles, DOI links, and journal records.", "url": "publications.html" },
+      { "visible": true, "number": "03", "title": "People", "text": "PI, postdocs, graduate students, undergraduates, and alumni.", "url": "people.html" },
+      { "visible": true, "number": "04", "title": "Contact", "text": "Email, office, lab address, and academic profile links.", "url": "contact.html" }
+    ]
+  },
+  "joinBand": {
+    "show": true,
+    "eyebrow": "Recruiting",
+    "title": "We welcome motivated postdoctoral fellows, graduate students, and undergraduate researchers.",
+    "buttonLabel": "Open Positions",
+    "buttonUrl": "join.html",
+    "buttonIcon": "arrow-right"
+  }
+}

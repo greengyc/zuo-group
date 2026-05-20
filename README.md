@@ -4,7 +4,7 @@ This is the first formal English website framework for the Zuo Group / Zhijun Zu
 
 ## Open locally
 
-Double-click `index.html` to open the website in a browser.
+This website now uses JSON content files. For the most accurate local preview, open the folder through a local web server instead of double-clicking `index.html`.
 
 ## Current structure
 
@@ -18,30 +18,13 @@ Double-click `index.html` to open the website in a browser.
 - `facilities.html` - HPLC and GC-MS facilities
 - `join.html` - International recruiting page
 - `contact.html` - Contact and academic profile links
-- `data/publications.js` - Routine publication updates
-- `data/people.js` - Routine people updates
-- `data/news.js` - Routine news updates
-- `js/content-renderer.js` - Turns data files into page content
+- `content/*.json` - Content edited through the admin page
+- `admin/config.yml` - Admin form configuration
+- `js/content-renderer.js` - Turns JSON content into page content
 
 ## Routine editing
 
-For routine updates, edit the files in `data/` instead of editing the HTML pages directly:
-
-- Add or edit publications in `data/publications.js`
-- Add or edit group members in `data/people.js`
-- Add or edit announcements in `data/news.js`
-
-The pages will automatically render the edited data in the existing design.
-
-## Editing the top hero text
-
-The home page uses its own large hero layout. For all other pages, the top hero area is locked to a fixed visual grid:
-
-- first line: red page label inside `<p class="eyebrow">...</p>`
-- second line: white title inside `<h1>...</h1>`
-- third line: white subtitle inside the following `<p>...</p>`
-
-When updating a page later, edit only the text inside those three tags. Keep the tag order unchanged so the top area stays visually aligned across pages.
+For routine updates, use the `/admin/` page. The admin page provides form fields for global site settings, homepage content, page hero areas, publications, people, news, photos, resources, facilities, joining information, and contact information.
 
 ## Content sources used
 

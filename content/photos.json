@@ -1,27 +1,42 @@
 {
+  "hero": {
+    "show": true,
+    "eyebrow": "Photos",
+    "title": "Group photos and activities.",
+    "subtitle": "Selected moments from group meetings, conferences, graduations, and laboratory life.",
+    "backgroundImage": "assets/hero-lab.png",
+    "titleSize": "normal",
+    "textAlignment": "left",
+    "buttons": []
+  },
   "photos": [
     {
+      "visible": true,
       "title": "Group Photo",
       "caption": "Replace with a current group photo",
       "image": "",
       "large": true
     },
     {
+      "visible": true,
       "title": "Lab Meeting",
       "caption": "Seminars and internal discussions",
       "image": ""
     },
     {
+      "visible": true,
       "title": "Conference",
       "caption": "Presentations and academic visits",
       "image": ""
     },
     {
+      "visible": true,
       "title": "Graduation",
       "caption": "Degree completion and alumni moments",
       "image": ""
     },
     {
+      "visible": true,
       "title": "Lab Life",
       "caption": "Daily research activities",
       "image": ""

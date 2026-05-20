@@ -1,18 +1,31 @@
 {
+  "hero": {
+    "show": true,
+    "eyebrow": "Research",
+    "title": "Catalytic strategies for selective synthesis.",
+    "subtitle": "Photoredox catalysis, radical chemistry, and asymmetric metal catalysis for modern organic synthesis.",
+    "backgroundImage": "assets/hero-lab.png",
+    "titleSize": "normal",
+    "textAlignment": "left",
+    "buttons": []
+  },
   "topics": [
     {
+      "visible": true,
       "number": "01",
       "titleLine1": "Photoredox",
       "titleLine2": "Catalysis",
       "text": "We use visible light to generate reactive radical intermediates under mild conditions, enabling transformations that are difficult to achieve through conventional polar reactivity."
     },
     {
+      "visible": true,
       "number": "02",
       "titleLine1": "Radical",
       "titleLine2": "Chemistry",
       "text": "Radical reactivity is used to access selective bond construction, cross-coupling, and functionalization modes that complement classical two-electron chemistry."
     },
     {
+      "visible": true,
       "number": "03",
       "titleLine1": "Asymmetric",
       "titleLine2": "Metal Catalysis",

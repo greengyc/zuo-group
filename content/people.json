@@ -1,9 +1,21 @@
 {
+  "hero": {
+    "show": true,
+    "eyebrow": "People",
+    "title": "Zhijun Zuo Research Group",
+    "subtitle": "Photoredox, radical, and asymmetric metal catalysis in synthesis.",
+    "backgroundImage": "assets/hero-lab.png",
+    "titleSize": "normal",
+    "textAlignment": "left",
+    "buttons": []
+  },
   "groups": [
     {
+      "visible": true,
       "category": "Principal Investigator",
       "members": [
         {
+          "visible": true,
           "name": "Zhijun Zuo",
           "role": "Professor / Principal Investigator",
           "photo": "assets/people/zhijun-zuo.jpg",
@@ -17,41 +29,50 @@
       ]
     },
     {
+      "visible": true,
       "category": "Postdocs",
       "members": [
         {
+          "visible": true,
           "name": "To be updated",
           "role": "Postdoctoral Fellow"
         }
       ]
     },
     {
+      "visible": true,
       "category": "Graduate Students",
       "members": [
         {
+          "visible": true,
           "name": "To be updated",
           "role": "PhD Student"
         },
         {
+          "visible": true,
           "name": "To be updated",
           "role": "Master Student"
         },
         {
+          "visible": true,
           "name": "To be updated",
           "role": "Graduate Student"
         }
       ]
     },
     {
+      "visible": true,
       "category": "Undergraduate Students",
       "members": [
         {
+          "visible": true,
           "name": "To be updated",
           "role": "Undergraduate Researcher"
         }
       ]
     },
     {
+      "visible": true,
       "category": "Alumni",
       "note": "Future format: name, degree, graduation year, and current position.",
       "members": []

@@ -1,120 +1,64 @@
-# Zuo Group website maintenance guide
+# Zuo Group Website Maintenance Guide
 
 Online website:
 
+```text
 https://greengyc.github.io/zuo-group/
+```
 
 GitHub repository:
 
+```text
 https://github.com/greengyc/zuo-group
-
-## The simple rule
-
-For routine updates, edit only these files:
-
-- `data/publications.js`
-- `data/people.js`
-- `data/news.js`
-
-Do not edit `publications.html`, `people.html`, or `news.html` unless changing the page design.
-
-## Update publications
-
-Open:
-
-`data/publications.js`
-
-Each publication looks like this:
-
-```js
-{
-  year: "2026",
-  title: "Paper title",
-  authors: "Author A, Author B, Zhijun Zuo*",
-  journal: "Angew. Chem., Int. Ed.",
-  details: "65, e7485683.",
-  tocColor: "blue",
-  doiUrl: "https://doi.org/...",
-  journalUrl: "https://journal-page-url"
-}
 ```
 
-To add a new publication, copy one complete block, paste it in the correct year position, and edit the text.
+## The Simple Rule
 
-Formatting rules:
+Routine editing should be done through the website admin page:
 
-- Journal names are automatically italic.
-- Only the year is automatically bold.
-- Keep the comma after the year in the rendered citation.
-- If DOI is not ready, use:
-
-```js
-doiLabel: "DOI to be added",
+```text
+/admin/
 ```
 
-instead of `doiUrl`.
+Do not edit `.html`, `.css`, `.js`, or `.json` files by hand unless changing the website system itself.
 
-## Update people
+## What Can Be Edited In The Admin Page
 
-Open:
+- Global site brand, top menu, footer, and theme color
+- Homepage large image area, buttons, research-focus section, guide cards, recruiting band
+- Top title section on Research, Publications, People, News, Photos, Resources, Facilities, Join Us, and Contact
+- Research direction cards
+- Publication entries, DOI links, journal links, and TOC images
+- People groups, members, photos, and alumni information
+- News items, optional images, and optional buttons
+- Photo tiles
+- Resource cards
+- Facility cards
+- Join Us text and extra blocks
+- Contact rows and profile links
 
-`data/people.js`
+## Recommended Editing Workflow
 
-A simple member entry looks like this:
+1. Open `/admin/`.
+2. Log in with the invited editor account.
+3. Choose the page or section you want to edit.
+4. Make a small change first.
+5. Click `Publish` and then `Publish now`.
+6. Wait 1-3 minutes.
+7. Refresh the public website and check the result.
 
-```js
-{ name: "Student Name", role: "Graduate Student" }
-```
+## Safe Editing Tips
 
-For alumni, use:
+- Use the `Show this...` switch to hide content without deleting it.
+- For internal links, use filenames like `research.html` or `contact.html`.
+- For external links, use full URLs beginning with `https://`.
+- For uploaded images, use clear filenames in English.
+- If a design looks wrong after a change, revert the last edited field in `/admin/` and publish again.
 
-```js
-{
-  name: "Alumni Name",
-  degree: "PhD",
-  year: "2026",
-  destination: "Current position"
-}
-```
+## Content Still Useful To Add Later
 
-Keep quotation marks and commas.
-
-## Update news
-
-Open:
-
-`data/news.js`
-
-A news item looks like this:
-
-```js
-{
-  date: "2026",
-  title: "News title",
-  text: "One or two sentences describing the update."
-}
-```
-
-Newest items should be placed first.
-
-## Upload updates to GitHub
-
-If editing locally, run:
-
-```powershell
-git add .
-git commit -m "Update website content"
-git push
-```
-
-If editing directly on GitHub, click `Commit changes`.
-
-The live website usually updates in 1-3 minutes.
-
-## Still useful to confirm later
-
-- Real English names and roles for all group members
-- Alumni graduation years and destinations
+- Confirmed English spellings for all group members
+- Member roles and alumni destinations
 - Real TOC images for publications
-- Group photos
+- Group photos and activity photos
 - ResearchGate profile URL
