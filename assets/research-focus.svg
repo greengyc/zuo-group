@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Visible-light-promoted activation of inert C-H, C-C, and C-F bonds</title>
+  <desc id="desc">Academic reaction-scheme style illustration for photoredox, radical, and metal catalysis research.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f9fbfc"/>
+      <stop offset="1" stop-color="#eef3f6"/>
+    </linearGradient>
+    <radialGradient id="light" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#4aa3ff" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#4aa3ff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#4aa3ff" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow" markerHeight="10" markerWidth="10" orient="auto" refX="9" refY="3">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#17202a"/>
+    </marker>
+    <marker id="red-arrow" markerHeight="10" markerWidth="10" orient="auto" refX="9" refY="3">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#9e2f32"/>
+    </marker>
+    <style>
+      .bg { fill: #ffffff; }
+      .panel { fill: url(#panel); stroke: #d9e1e7; stroke-width: 2; }
+      .ink { fill: #17202a; }
+      .muted { fill: #5f6b76; }
+      .red { fill: #9e2f32; }
+      .blue { fill: #2f6f99; }
+      .line { fill: none; stroke: #17202a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: #65727e; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .redline { fill: none; stroke: #9e2f32; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .blueline { fill: none; stroke: #2f6f99; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .label { font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: 0; }
+      .serif { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+      .small { font-size: 28px; }
+      .body { font-family: Arial, Helvetica, sans-serif; font-size: 27px; font-weight: 500; }
+      .caption { font-family: Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 600; }
+      .mono { font-family: "Times New Roman", Georgia, serif; font-size: 35px; font-style: italic; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="1000"/>
+  <rect x="56" y="54" width="1488" height="892" rx="20" class="panel"/>
+  <path d="M108 168 H1492" class="thin" opacity="0.55"/>
+  <text x="108" y="122" class="label red small">RESEARCH CONCEPT</text>
+  <text x="108" y="158" class="body muted">Visible-light-promoted activation and functionalization of inert bonds</text>
+
+  <circle cx="800" cy="386" r="168" fill="url(#light)"/>
+  <circle cx="800" cy="386" r="70" fill="#f8fbff" stroke="#2f6f99" stroke-width="4"/>
+  <text x="754" y="372" class="label blue" font-size="40">hv</text>
+  <text x="726" y="418" class="caption muted">visible light</text>
+  <path d="M694 320 L658 292 M706 286 L690 242 M746 264 L746 220 M904 320 L940 292 M894 286 L910 242 M854 264 L854 220" class="blueline" opacity="0.85"/>
+
+  <rect x="630" y="548" width="340" height="116" rx="10" fill="#ffffff" stroke="#d9e1e7" stroke-width="2"/>
+  <text x="679" y="596" class="label ink" font-size="30">Photoredox / radical</text>
+  <text x="706" y="633" class="caption muted">SET, HAT, radical relay</text>
+
+  <path d="M800 518 V548" class="line" marker-end="url(#arrow)"/>
+  <path d="M718 430 C548 432 452 422 334 356" class="line" marker-end="url(#arrow)"/>
+  <path d="M882 430 C1052 432 1148 422 1266 356" class="line" marker-end="url(#arrow)"/>
+  <path d="M718 466 C540 594 452 648 326 702" class="line" marker-end="url(#arrow)"/>
+  <path d="M882 466 C1060 594 1148 648 1274 702" class="line" marker-end="url(#arrow)"/>
+
+  <g transform="translate(112,220)">
+    <rect x="0" y="0" width="420" height="260" rx="16" fill="#ffffff" stroke="#d9e1e7" stroke-width="2"/>
+    <text x="30" y="52" class="label red" font-size="34">C-H activation</text>
+    <text x="30" y="88" class="caption muted">inert sp3 / aryl C-H bonds</text>
+    <polygon points="126,154 158,100 222,100 254,154 222,208 158,208" class="thin"/>
+    <line x1="254" y1="154" x2="326" y2="154" class="line"/>
+    <text x="330" y="164" class="mono ink">H</text>
+    <path d="M294 136 L358 136" class="redline"/>
+    <text x="130" y="238" class="caption muted">selective C-H functionalization</text>
+  </g>
+
+  <g transform="translate(1068,220)">
+    <rect x="0" y="0" width="420" height="260" rx="16" fill="#ffffff" stroke="#d9e1e7" stroke-width="2"/>
+    <text x="30" y="52" class="label red" font-size="34">C-F activation</text>
+    <text x="30" y="88" class="caption muted">strong C-F bonds in fluorinated arenes</text>
+    <polygon points="110,154 142,100 206,100 238,154 206,208 142,208" class="thin"/>
+    <line x1="238" y1="154" x2="310" y2="154" class="line"/>
+    <text x="316" y="164" class="mono ink">F</text>
+    <path d="M274 132 L344 132" class="redline"/>
+    <text x="92" y="238" class="caption muted">defluorinative functionalization</text>
+  </g>
+
+  <g transform="translate(112,624)">
+    <rect x="0" y="0" width="420" height="260" rx="16" fill="#ffffff" stroke="#d9e1e7" stroke-width="2"/>
+    <text x="30" y="52" class="label red" font-size="34">C-C activation</text>
+    <text x="30" y="88" class="caption muted">strained or activated C-C bonds</text>
+    <path d="M126 186 L200 104 L274 186 Z" class="thin"/>
+    <path d="M200 104 L200 186" class="redline"/>
+    <path d="M296 144 H360" class="line" marker-end="url(#arrow)"/>
+    <path d="M86 222 C142 202 192 202 250 222" class="thin"/>
+    <text x="104" y="238" class="caption muted">ring opening / difunctionalization</text>
+  </g>
+
+  <g transform="translate(1068,624)">
+    <rect x="0" y="0" width="420" height="260" rx="16" fill="#ffffff" stroke="#d9e1e7" stroke-width="2"/>
+    <text x="30" y="52" class="label red" font-size="34">Bond construction</text>
+    <text x="30" y="88" class="caption muted">mild conditions, selective synthesis</text>
+    <path d="M92 164 H184" class="line"/>
+    <circle cx="92" cy="164" r="8" fill="#17202a"/>
+    <circle cx="184" cy="164" r="8" fill="#17202a"/>
+    <path d="M236 164 H328" class="line"/>
+    <circle cx="236" cy="164" r="8" fill="#17202a"/>
+    <circle cx="328" cy="164" r="8" fill="#17202a"/>
+    <path d="M184 164 C206 126 214 126 236 164" class="redline" marker-end="url(#red-arrow)"/>
+    <text x="98" y="238" class="caption muted">C-C, C-X and heteroatom coupling</text>
+  </g>
+
+  <path d="M626 758 C708 714 892 714 974 758" class="thin" opacity="0.72"/>
+  <text x="629" y="812" class="label ink" font-size="34">New catalytic strategies for selective bond activation</text>
+  <text x="621" y="852" class="caption muted">visible light + radical intermediates + metal catalysis</text>
+</svg>
