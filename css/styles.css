@@ -440,6 +440,10 @@ body[data-page="home"] .section-kicker .eyebrow {
   text-transform: uppercase;
 }
 
+body[data-page="home"] .nav-card span {
+  font-size: 18px;
+}
+
 .nav-card p,
 .info-card p,
 .research-feature p,
