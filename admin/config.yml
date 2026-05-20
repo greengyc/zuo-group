@@ -102,17 +102,76 @@ collections:
             name: "hero"
             widget: "object"
             fields:
+              - { label: "Show this top section", name: "show", widget: "boolean", required: false, default: true }
               - { label: "Small red label", name: "eyebrow", widget: "string" }
               - { label: "Large title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Background image", name: "backgroundImage", widget: "image", required: false }
+              - label: "Title size"
+                name: "titleSize"
+                widget: "select"
+                default: "normal"
+                options: ["compact", "normal", "large"]
+              - label: "Text alignment"
+                name: "textAlignment"
+                widget: "select"
+                default: "left"
+                options: ["left", "center"]
+              - label: "Hero buttons"
+                name: "buttons"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Button text", name: "label", widget: "string" }
+                  - { label: "Button link", name: "url", widget: "string" }
+                  - label: "Button style"
+                    name: "style"
+                    widget: "select"
+                    required: false
+                    default: "primary"
+                    options: ["primary", "ghost"]
+          - label: "Editable content blocks"
+            name: "blocks"
+            widget: "list"
+            required: false
+            summary: "{{fields.type}} - {{fields.title}}"
+            fields:
+              - { label: "Show this block", name: "visible", widget: "boolean", required: false, default: true }
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                default: "text"
+                options: ["text", "image", "button"]
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Text", name: "text", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Button text", name: "buttonLabel", widget: "string", required: false }
+              - { label: "Button link", name: "buttonUrl", widget: "string", required: false }
+              - label: "Button style"
+                name: "buttonStyle"
+                widget: "select"
+                required: false
+                default: "primary"
+                options: ["primary", "ghost"]
           - label: "News items"
             name: "items"
             widget: "list"
             summary: "{{fields.date}} - {{fields.title}}"
             fields:
+              - { label: "Show this item", name: "visible", widget: "boolean", required: false, default: true }
               - { label: "Date", name: "date", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Button text", name: "buttonLabel", widget: "string", required: false }
+              - { label: "Button link", name: "buttonUrl", widget: "string", required: false }
+              - label: "Button style"
+                name: "buttonStyle"
+                widget: "select"
+                required: false
+                default: "primary"
+                options: ["primary", "ghost"]
 
       - name: "photos"
         label: "Photos"

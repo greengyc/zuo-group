@@ -28,17 +28,68 @@
     if (window.lucide) window.lucide.createIcons();
   }
 
+  function linkButton(label, url, style = "primary") {
+    if (!label || !url) return "";
+    const safeStyle = style === "ghost" ? "ghost" : "primary";
+    return `<a class="button ${safeStyle}" href="${escapeAttr(url)}">${escapeHtml(label)}</a>`;
+  }
+
   function renderHero(data) {
     const hero = data?.hero;
     if (!hero) return;
 
+    const heroSection = document.querySelector("[data-page-hero]");
     const eyebrow = document.querySelector("[data-hero-eyebrow]");
     const title = document.querySelector("[data-hero-title]");
     const subtitle = document.querySelector("[data-hero-subtitle]");
+    const actions = document.querySelector("[data-hero-actions]");
+
+    if (heroSection) {
+      heroSection.hidden = hero.show === false;
+      if (hero.show === false) return;
+    }
 
     if (eyebrow && hero.eyebrow !== undefined) eyebrow.textContent = hero.eyebrow;
     if (title && hero.title !== undefined) title.textContent = hero.title;
     if (subtitle && hero.subtitle !== undefined) subtitle.textContent = hero.subtitle;
+
+    if (heroSection) {
+      heroSection.classList.remove("hero-size-compact", "hero-size-normal", "hero-size-large", "hero-align-left", "hero-align-center");
+      heroSection.classList.add(`hero-size-${hero.titleSize || "normal"}`);
+      heroSection.classList.add(`hero-align-${hero.textAlignment || "left"}`);
+      if (hero.backgroundImage) {
+        const backgroundUrl = String(hero.backgroundImage).replace(/"/g, '\\"');
+        heroSection.style.backgroundImage = `linear-gradient(120deg, rgba(16, 24, 32, 0.92), rgba(23, 32, 42, 0.78)), url("${backgroundUrl}")`;
+      }
+    }
+
+    if (actions) {
+      actions.innerHTML = (hero.buttons || [])
+        .map((button) => linkButton(button.label, button.url, button.style))
+        .join("");
+      actions.hidden = !actions.innerHTML;
+    }
+  }
+
+  function renderNewsBlocks(data) {
+    const target = document.querySelector("[data-news-blocks]");
+    if (!target) return;
+
+    target.innerHTML = (data?.blocks || [])
+      .filter((block) => block.visible !== false)
+      .map((block) => {
+        if (block.type === "image") {
+          const image = block.image ? `<img src="${escapeAttr(block.image)}" alt="${escapeAttr(block.title || "News image")}" />` : "";
+          return `<article class="news-block image-block">${image}<div><h2>${escapeHtml(block.title)}</h2><p>${escapeHtml(block.text)}</p></div></article>`;
+        }
+
+        if (block.type === "button") {
+          return `<article class="news-block button-block"><div><h2>${escapeHtml(block.title)}</h2><p>${escapeHtml(block.text)}</p></div>${linkButton(block.buttonLabel, block.buttonUrl, block.buttonStyle)}</article>`;
+        }
+
+        return `<article class="news-block text-block"><h2>${escapeHtml(block.title)}</h2><p>${escapeHtml(block.text)}</p></article>`;
+      })
+      .join("");
   }
 
   function publicationLinks(item) {
@@ -130,10 +181,15 @@
     const target = document.querySelector("[data-news-list]");
     const items = Array.isArray(data) ? data : data?.items;
     renderHero(data);
+    renderNewsBlocks(data);
     if (!items || !target) return;
 
     target.innerHTML = items
-      .map((item) => `<article><time>${escapeHtml(item.date)}</time><h2>${escapeHtml(item.title)}</h2><p>${escapeHtml(item.text)}</p></article>`)
+      .filter((item) => item.visible !== false)
+      .map((item) => {
+        const image = item.image ? `<img class="news-item-image" src="${escapeAttr(item.image)}" alt="${escapeAttr(item.title)}" />` : "";
+        return `<article class="${image ? "has-image" : ""}">${image}<div><time>${escapeHtml(item.date)}</time><h2>${escapeHtml(item.title)}</h2><p>${escapeHtml(item.text)}</p>${linkButton(item.buttonLabel, item.buttonUrl, item.buttonStyle)}</div></article>`;
+      })
       .join("");
   }
 

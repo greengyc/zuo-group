@@ -1,17 +1,25 @@
 // Local preview fallback. The live site reads content/news.json.
 window.ZUO_NEWS = {
   hero: {
+    show: true,
     eyebrow: "News",
     title: "News and updates.",
-    subtitle: "Selected group announcements, publications, meetings, and recruiting information."
+    subtitle: "Selected group announcements, publications, meetings, and recruiting information.",
+    backgroundImage: "assets/hero-lab.png",
+    titleSize: "normal",
+    textAlignment: "left",
+    buttons: []
   },
+  blocks: [],
   items: [
     {
+      visible: true,
       date: "2026",
       title: "Website launched",
       text: "The English website of the Zuo Group is now available online."
     },
     {
+      visible: true,
       date: "Ongoing",
       title: "Recruiting",
       text: "Motivated postdoctoral fellows, graduate students, and undergraduate researchers are welcome to contact the group."
