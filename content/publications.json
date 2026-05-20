@@ -31,7 +31,8 @@
       "details": "65, e7485683.",
       "tocColor": "blue",
       "doiLabel": "DOI to be added",
-      "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/journal/15213773"
+      "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/journal/15213773",
+      "tocLabel": "TOC pending"
     },
     {
       "visible": true,
@@ -42,7 +43,8 @@
       "details": "28, 5004.",
       "tocColor": "teal",
       "doiUrl": "https://doi.org/10.1021/acs.orglett.6c01178",
-      "journalUrl": "https://pubs.acs.org/doi/10.1021/acs.orglett.6c01178"
+      "journalUrl": "https://pubs.acs.org/doi/10.1021/acs.orglett.6c01178",
+      "tocLabel": "TOC pending"
     },
     {
       "visible": true,
@@ -53,7 +55,8 @@
       "details": "64, e202515761.",
       "tocColor": "red",
       "doiUrl": "https://doi.org/10.1002/anie.202515761",
-      "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/anie.202515761"
+      "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/anie.202515761",
+      "tocLabel": "TOC pending"
     },
     {
       "visible": true,
@@ -64,7 +67,8 @@
       "details": "DOI: 10.1016/j.gresc.2025.06.003.",
       "tocColor": "gold",
       "doiUrl": "https://doi.org/10.1016/j.gresc.2025.06.003",
-      "journalUrl": "https://www.sciencedirect.com/journal/green-synthesis-and-catalysis"
+      "journalUrl": "https://www.sciencedirect.com/journal/green-synthesis-and-catalysis",
+      "tocLabel": "TOC pending"
     },
     {
       "visible": true,
@@ -75,7 +79,8 @@
       "details": "DOI: 10.1021/acs.orglett.4c04420.",
       "tocColor": "blue",
       "doiUrl": "https://doi.org/10.1021/acs.orglett.4c04420",
-      "journalUrl": "https://pubs.acs.org/journal/orlef7"
+      "journalUrl": "https://pubs.acs.org/journal/orlef7",
+      "tocLabel": "TOC pending"
     },
     {
       "visible": true,
@@ -86,7 +91,8 @@
       "details": "DOI: 10.1039/D4GC03774J.",
       "tocColor": "teal",
       "doiUrl": "https://doi.org/10.1039/D4GC03774J",
-      "journalUrl": "https://www.rsc.org/journals-books-databases/about-journals/green-chemistry/"
+      "journalUrl": "https://www.rsc.org/journals-books-databases/about-journals/green-chemistry/",
+      "tocLabel": "TOC pending"
     },
     {
       "visible": true,
@@ -97,7 +103,8 @@
       "details": "DOI: 10.1039/D4QO01517G.",
       "tocColor": "red",
       "doiUrl": "https://doi.org/10.1039/D4QO01517G",
-      "journalUrl": "https://www.rsc.org/journals-books-databases/about-journals/organic-chemistry-frontiers/"
+      "journalUrl": "https://www.rsc.org/journals-books-databases/about-journals/organic-chemistry-frontiers/",
+      "tocLabel": "TOC pending"
     },
     {
       "visible": true,
@@ -108,7 +115,8 @@
       "details": "DOI: 10.1055/a-2342-8284.",
       "tocColor": "gold",
       "doiUrl": "https://doi.org/10.1055/a-2342-8284",
-      "journalUrl": "https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00000083"
+      "journalUrl": "https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00000083",
+      "tocLabel": "TOC pending"
     },
     {
       "visible": true,
@@ -119,7 +127,8 @@
       "details": "63, e202401579.",
       "tocColor": "blue",
       "doiUrl": "https://doi.org/10.1002/anie.202401579",
-      "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/anie.202401579"
+      "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/anie.202401579",
+      "tocLabel": "TOC pending"
     },
     {
       "visible": true,
@@ -130,7 +139,8 @@
       "details": "26, 35.",
       "tocColor": "teal",
       "doiUrl": "https://doi.org/10.1021/acs.orglett.3c03450",
-      "journalUrl": "https://pubs.acs.org/doi/10.1021/acs.orglett.3c03450"
+      "journalUrl": "https://pubs.acs.org/doi/10.1021/acs.orglett.3c03450",
+      "tocLabel": "TOC pending"
     }
   ],
   "prior": [

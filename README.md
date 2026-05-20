@@ -26,6 +26,10 @@ This website now uses JSON content files. For the most accurate local preview, o
 
 For routine updates, use the `/admin/` page. The admin page provides form fields for global site settings, homepage content, page hero areas, publications, people, news, photos, resources, facilities, joining information, and contact information.
 
+## CMS coverage audit
+
+The repo includes `scripts/audit-cms-coverage.js`. It is used before releases to check that rendered visible text, images, buttons, links, and content fields are covered by the admin-managed content files.
+
 ## Content sources used
 
 The X-MOL group page and the Northwest University faculty page were used as data sources for public facts. The website itself is not a direct translation of X-MOL; it is written as a new international English research-group website.

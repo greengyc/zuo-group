@@ -55,6 +55,23 @@ Do not edit `.html`, `.css`, `.js`, or `.json` files by hand unless changing the
 - For uploaded images, use clear filenames in English.
 - If a design looks wrong after a change, revert the last edited field in `/admin/` and publish again.
 
+## CMS Coverage Audit
+
+The project includes an audit script:
+
+```text
+scripts/audit-cms-coverage.js
+```
+
+Before structural releases, run this audit. It checks that:
+
+- every `content/*.json` file is registered in the admin configuration
+- every content field name has a matching admin field
+- every rendered visible text item is covered by admin-managed content
+- visible images, buttons, and links are covered by admin-managed content
+
+If the audit reports a missing item, move that item into `content/*.json`, expose it in `admin/config.yml`, and run the audit again.
+
 ## Content Still Useful To Add Later
 
 - Confirmed English spellings for all group members

@@ -8,6 +8,7 @@ window.ZUO_PUBLICATIONS = {
       authors: "Lebin Qian, Yi Wang, Lei Zhu, Xiaotian Qi, Xinjun Luan, Zhijun Zuo*",
       journal: "Angew. Chem., Int. Ed.",
       details: "65, e7485683.",
+      tocLabel: "TOC pending",
       tocColor: "blue",
       doiLabel: "DOI to be added",
       journalUrl: "https://chemistry-europe.onlinelibrary.wiley.com/journal/15213773"
@@ -18,6 +19,7 @@ window.ZUO_PUBLICATIONS = {
       authors: "Yuxiang Zhang, Xinyue Ma, Wei Sun, and Zhijun Zuo*",
       journal: "Org. Lett.",
       details: "28, 5004.",
+      tocLabel: "TOC pending",
       tocColor: "teal",
       doiUrl: "https://doi.org/10.1021/acs.orglett.6c01178",
       journalUrl: "https://pubs.acs.org/doi/10.1021/acs.orglett.6c01178"
@@ -28,6 +30,7 @@ window.ZUO_PUBLICATIONS = {
       authors: "Jinrong Du, Jiale Li, Lebin Qian, Xinjun Luan*, Zhijun Zuo*",
       journal: "Angew. Chem., Int. Ed.",
       details: "64, e202515761.",
+      tocLabel: "TOC pending",
       tocColor: "red",
       doiUrl: "https://doi.org/10.1002/anie.202515761",
       journalUrl: "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/anie.202515761"
@@ -38,6 +41,7 @@ window.ZUO_PUBLICATIONS = {
       authors: "Haonan Wei, Haohao Huang, Heiyan Liu, Zhijun Zuo*",
       journal: "Green Synth. Catal.",
       details: "DOI: 10.1016/j.gresc.2025.06.003.",
+      tocLabel: "TOC pending",
       tocColor: "gold",
       doiUrl: "https://doi.org/10.1016/j.gresc.2025.06.003",
       journalUrl: "https://www.sciencedirect.com/journal/green-synthesis-and-catalysis"
@@ -48,6 +52,7 @@ window.ZUO_PUBLICATIONS = {
       authors: "Jiyao Zhang, Yuxiang Zhang, Lebin Qian, Zhijun Zuo*",
       journal: "Org. Lett.",
       details: "DOI: 10.1021/acs.orglett.4c04420.",
+      tocLabel: "TOC pending",
       tocColor: "blue",
       doiUrl: "https://doi.org/10.1021/acs.orglett.4c04420",
       journalUrl: "https://pubs.acs.org/journal/orlef7"
@@ -58,6 +63,7 @@ window.ZUO_PUBLICATIONS = {
       authors: "Ziyi Wang, Haonan Wei, Jingrong Du, Zhijun Zuo*",
       journal: "Green Chem.",
       details: "DOI: 10.1039/D4GC03774J.",
+      tocLabel: "TOC pending",
       tocColor: "teal",
       doiUrl: "https://doi.org/10.1039/D4GC03774J",
       journalUrl: "https://www.rsc.org/journals-books-databases/about-journals/green-chemistry/"
@@ -68,6 +74,7 @@ window.ZUO_PUBLICATIONS = {
       authors: "Yu Sun, Yi Wang, Zhijun Zuo*",
       journal: "Org. Chem. Front.",
       details: "DOI: 10.1039/D4QO01517G.",
+      tocLabel: "TOC pending",
       tocColor: "red",
       doiUrl: "https://doi.org/10.1039/D4QO01517G",
       journalUrl: "https://www.rsc.org/journals-books-databases/about-journals/organic-chemistry-frontiers/"
@@ -78,6 +85,7 @@ window.ZUO_PUBLICATIONS = {
       authors: "Jiyao Zhang, Haohao Huang, Zhijun Zuo*",
       journal: "Synlett",
       details: "DOI: 10.1055/a-2342-8284.",
+      tocLabel: "TOC pending",
       tocColor: "gold",
       doiUrl: "https://doi.org/10.1055/a-2342-8284",
       journalUrl: "https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00000083"
@@ -88,6 +96,7 @@ window.ZUO_PUBLICATIONS = {
       authors: "Haohao Huang, Xinjun Luan*, Zhijun Zuo*",
       journal: "Angew. Chem., Int. Ed.",
       details: "63, e202401579.",
+      tocLabel: "TOC pending",
       tocColor: "blue",
       doiUrl: "https://doi.org/10.1002/anie.202401579",
       journalUrl: "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/anie.202401579"
@@ -98,6 +107,7 @@ window.ZUO_PUBLICATIONS = {
       authors: "Yu Sun, Na Zhang, Jingyun Ren, Haohao Huang, Xinjun Luan*, Zhijun Zuo*",
       journal: "Org. Lett.",
       details: "26, 35.",
+      tocLabel: "TOC pending",
       tocColor: "teal",
       doiUrl: "https://doi.org/10.1021/acs.orglett.3c03450",
       journalUrl: "https://pubs.acs.org/doi/10.1021/acs.orglett.3c03450"
