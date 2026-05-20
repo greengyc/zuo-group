@@ -21,7 +21,7 @@
 }
 
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -78,15 +78,15 @@ a {
 }
 
 .brand-mark {
-  display: inline-block;
-  flex: 0 0 52px;
-  width: 52px;
-  height: 52px;
-  overflow: hidden;
-  color: transparent;
-  font-size: 0;
-  line-height: 0;
-  background: url("../assets/zuo-logo.svg") center / contain no-repeat;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .brand-text {
@@ -326,8 +326,6 @@ h3 {
 .page-hero {
   display: grid;
   min-height: var(--hero-height);
-  grid-template-rows: 22px 96px 72px;
-  row-gap: 16px;
   align-content: center;
   padding-top: 0;
   padding-bottom: 0;
@@ -342,32 +340,17 @@ h3 {
   max-width: 1120px;
 }
 
-.page-hero .eyebrow {
-  display: flex;
-  height: 22px;
-  align-items: center;
-  margin: 0;
-  overflow: hidden;
-  line-height: 1;
-  white-space: nowrap;
-}
-
 .page-hero h1 {
-  height: 96px;
-  margin: 0;
+  margin-bottom: 24px;
   font-size: clamp(54px, 5.5vw, 92px);
-  line-height: 96px;
-  overflow: hidden;
+  line-height: 0.98;
   white-space: nowrap;
 }
 
 .page-hero > p:not(.eyebrow) {
-  height: 72px;
-  margin: 0;
   color: rgba(255, 255, 255, 0.82);
   font-size: clamp(19px, 1.6vw, 24px);
   line-height: 1.48;
-  overflow: hidden;
 }
 
 .split-section {
