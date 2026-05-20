@@ -1,113 +1,105 @@
-# Zuo Group website 维护说明
+# Zuo Group website maintenance guide
 
-线上网站：
+Online website:
 
 https://greengyc.github.io/zuo-group/
 
-本地文件夹：
+GitHub repository:
 
-E:\左师兄主页
+https://github.com/greengyc/zuo-group
 
-## 1. 修改新闻
+## The simple rule
 
-打开 `news.html`，找到这一段：
+For routine updates, edit only these files:
 
-```html
-<div class="timeline">
-  ...
-</div>
+- `data/publications.js`
+- `data/people.js`
+- `data/news.js`
+
+Do not edit `publications.html`, `people.html`, or `news.html` unless changing the page design.
+
+## Update publications
+
+Open:
+
+`data/publications.js`
+
+Each publication looks like this:
+
+```js
+{
+  year: "2026",
+  title: "Paper title",
+  authors: "Author A, Author B, Zhijun Zuo*",
+  journal: "Angew. Chem., Int. Ed.",
+  details: "65, e7485683.",
+  tocColor: "blue",
+  doiUrl: "https://doi.org/...",
+  journalUrl: "https://journal-page-url"
+}
 ```
 
-复制一个 `<article>...</article>`，改里面的日期、标题和正文即可。
+To add a new publication, copy one complete block, paste it in the correct year position, and edit the text.
 
-推荐格式：
+Formatting rules:
 
-```html
-<article>
-  <time>2026</time>
-  <h2>News title</h2>
-  <p>One or two sentences describing the update.</p>
-</article>
+- Journal names are automatically italic.
+- Only the year is automatically bold.
+- Keep the comma after the year in the rendered citation.
+- If DOI is not ready, use:
+
+```js
+doiLabel: "DOI to be added",
 ```
 
-## 2. 修改论文
+instead of `doiUrl`.
 
-打开 `publications.html`。
+## Update people
 
-每篇论文在一个 `<article class="publication-item">...</article>` 里。
+Open:
 
-如果要新增论文，复制一整段论文卡片，然后修改：
+`data/people.js`
 
-- 年份
-- 题目
-- 作者
-- 期刊、年份、卷号、页码
-- DOI 链接
-- Journal 链接
+A simple member entry looks like this:
 
-当前格式要求：
-
-```html
-<p class="citation"><em>Journal Abbrev.</em> <strong>2026</strong>, volume, page.</p>
+```js
+{ name: "Student Name", role: "Graduate Student" }
 ```
 
-注意：期刊名只斜体，只有年份加粗。
+For alumni, use:
 
-## 3. 修改人员名单
-
-打开 `people.html`。
-
-目前学生名单位置使用 `To be updated` 占位。拿到正式英文名单后，替换为：
-
-```html
-<div class="person-placeholder">
-  <strong>Student Name</strong>
-  <span>PhD Student</span>
-</div>
+```js
+{
+  name: "Alumni Name",
+  degree: "PhD",
+  year: "2026",
+  destination: "Current position"
+}
 ```
 
-可用身份写法：
+Keep quotation marks and commas.
 
-- Postdoctoral Fellow
-- PhD Student
-- Master Student
-- Undergraduate Researcher
-- Alumni
+## Update news
 
-Alumni 建议格式：
+Open:
 
-```text
-Name + Degree + Graduation Year + Current Position
+`data/news.js`
+
+A news item looks like this:
+
+```js
+{
+  date: "2026",
+  title: "News title",
+  text: "One or two sentences describing the update."
+}
 ```
 
-## 4. 添加照片
+Newest items should be placed first.
 
-把真实照片放到：
+## Upload updates to GitHub
 
-```text
-assets/photos/
-```
-
-建议文件名使用英文和短横线，例如：
-
-```text
-group-photo-2026.jpg
-conference-2026.jpg
-graduation-2026.jpg
-```
-
-然后打开 `photos.html`，把占位卡片替换为：
-
-```html
-<figure class="photo-real">
-  <img src="assets/photos/group-photo-2026.jpg" alt="Zuo Group photo, 2026" />
-  <figcaption>Group photo, 2026</figcaption>
-</figure>
-```
-
-## 5. 上传更新到 GitHub
-
-每次本地修改完成后，在这个文件夹里运行：
+If editing locally, run:
 
 ```powershell
 git add .
@@ -115,12 +107,14 @@ git commit -m "Update website content"
 git push
 ```
 
-一般 1-3 分钟后，线上网站会自动更新。
+If editing directly on GitHub, click `Commit changes`.
 
-## 6. 目前仍需人工确认的信息
+The live website usually updates in 1-3 minutes.
 
-- 真实学生英文姓名和身份
-- Alumni 的毕业年份、学位和去向
-- 真实组会、合照、会议照片
-- 第一篇 2026 Angew 论文的 DOI
-- ResearchGate 主页链接
+## Still useful to confirm later
+
+- Real English names and roles for all group members
+- Alumni graduation years and destinations
+- Real TOC images for publications
+- Group photos
+- ResearchGate profile URL

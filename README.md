@@ -10,14 +10,28 @@ Double-click `index.html` to open the website in a browser.
 
 - `index.html` - Home
 - `research.html` - Research directions
-- `publications.html` - Full publication list with DOI and journal links
-- `people.html` - PI, postdocs, graduate students, undergraduate students, alumni
-- `news.html` - Group news and recruiting updates
+- `publications.html` - Publication page layout
+- `people.html` - People page layout
+- `news.html` - News page layout
 - `photos.html` - Photo archive structure for future group images
 - `resources.html` - Group resources
 - `facilities.html` - HPLC and GC-MS facilities
 - `join.html` - International recruiting page
 - `contact.html` - Contact and academic profile links
+- `data/publications.js` - Routine publication updates
+- `data/people.js` - Routine people updates
+- `data/news.js` - Routine news updates
+- `js/content-renderer.js` - Turns data files into page content
+
+## Routine editing
+
+For routine updates, edit the files in `data/` instead of editing the HTML pages directly:
+
+- Add or edit publications in `data/publications.js`
+- Add or edit group members in `data/people.js`
+- Add or edit announcements in `data/news.js`
+
+The pages will automatically render the edited data in the existing design.
 
 ## Editing the top hero text
 
@@ -42,4 +56,4 @@ The X-MOL group page and the Northwest University faculty page were used as data
 - ResearchGate profile URL, if available
 - Detailed models/photos for HPLC and GC-MS
 
-For routine updates, see `MAINTENANCE.md`.
+For step-by-step instructions, see `MAINTENANCE.md`.
