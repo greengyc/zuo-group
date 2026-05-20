@@ -98,6 +98,13 @@ collections:
         file: "content/news.json"
         format: "json"
         fields:
+          - label: "Top title section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small red label", name: "eyebrow", widget: "string" }
+              - { label: "Large title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
           - label: "News items"
             name: "items"
             widget: "list"

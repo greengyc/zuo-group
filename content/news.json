@@ -1,4 +1,9 @@
 {
+  "hero": {
+    "eyebrow": "News",
+    "title": "News and updates.",
+    "subtitle": "Selected group announcements, publications, meetings, and recruiting information."
+  },
   "items": [
     {
       "date": "2026",

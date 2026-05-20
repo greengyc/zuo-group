@@ -28,6 +28,19 @@
     if (window.lucide) window.lucide.createIcons();
   }
 
+  function renderHero(data) {
+    const hero = data?.hero;
+    if (!hero) return;
+
+    const eyebrow = document.querySelector("[data-hero-eyebrow]");
+    const title = document.querySelector("[data-hero-title]");
+    const subtitle = document.querySelector("[data-hero-subtitle]");
+
+    if (eyebrow && hero.eyebrow !== undefined) eyebrow.textContent = hero.eyebrow;
+    if (title && hero.title !== undefined) title.textContent = hero.title;
+    if (subtitle && hero.subtitle !== undefined) subtitle.textContent = hero.subtitle;
+  }
+
   function publicationLinks(item) {
     const links = [];
 
@@ -116,6 +129,7 @@
   function renderNews(data) {
     const target = document.querySelector("[data-news-list]");
     const items = Array.isArray(data) ? data : data?.items;
+    renderHero(data);
     if (!items || !target) return;
 
     target.innerHTML = items
