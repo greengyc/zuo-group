@@ -344,6 +344,19 @@ h3 {
   gap: clamp(36px, 6vw, 84px);
 }
 
+body[data-page="home"] .section-kicker .eyebrow {
+  font-size: 15px;
+}
+
+.research-focus-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 46px rgba(16, 24, 32, 0.1);
+}
+
 .lead-text {
   max-width: 780px;
   color: var(--muted);
