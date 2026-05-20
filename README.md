@@ -10,12 +10,12 @@ Double-click `index.html` to open the website in a browser.
 
 - `index.html` - Home
 - `research.html` - Research directions
-- `publications.html` - Full publication list with TOC placeholders
+- `publications.html` - Full publication list with DOI and journal links
 - `people.html` - PI, postdocs, graduate students, undergraduate students, alumni
-- `news.html` - News placeholder
-- `photos.html` - Photo placeholder page
-- `resources.html` - Resource placeholder page
-- `facilities.html` - HPLC and GC-MS placeholders
+- `news.html` - Group news and recruiting updates
+- `photos.html` - Photo archive structure for future group images
+- `resources.html` - Group resources
+- `facilities.html` - HPLC and GC-MS facilities
 - `join.html` - International recruiting page
 - `contact.html` - Contact and academic profile links
 
@@ -41,3 +41,5 @@ The X-MOL group page and the Northwest University faculty page were used as data
 - Group photos and activity photos
 - ResearchGate profile URL, if available
 - Detailed models/photos for HPLC and GC-MS
+
+For routine updates, see `MAINTENANCE.md`.

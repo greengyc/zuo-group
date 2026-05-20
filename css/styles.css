@@ -663,9 +663,17 @@ body[data-page="join"] .split-section h2::first-letter {
 
 .person-large {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 128px minmax(0, 1fr);
+  align-items: center;
   gap: 26px;
   padding: 28px;
+}
+
+.person-photo {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .simple-person {
@@ -751,7 +759,10 @@ body[data-page="join"] .split-section h2::first-letter {
 .photo-tile {
   display: grid;
   min-height: 220px;
-  place-items: center;
+  align-content: center;
+  justify-items: center;
+  gap: 8px;
+  padding: 24px;
   border: 1px dashed #aeb8c2;
   border-radius: var(--radius);
   color: var(--muted);
@@ -759,6 +770,18 @@ body[data-page="join"] .split-section h2::first-letter {
     linear-gradient(135deg, rgba(47, 111, 153, 0.1), rgba(158, 47, 50, 0.08)),
     #f8fafb;
   font-weight: 850;
+}
+
+.photo-tile span {
+  color: var(--ink);
+  font-size: 22px;
+}
+
+.photo-tile small {
+  max-width: 260px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .photo-tile.large {
