@@ -4,7 +4,7 @@
     "eyebrow": "Photos",
     "title": "Group photos and activities.",
     "subtitle": "Selected moments from group meetings, conferences, graduations, and laboratory life.",
-    "backgroundImage": "assets/uploads/屏幕截图-2025-06-25-193928.png",
+    "backgroundImage": "",
     "titleSize": "normal",
     "textAlignment": "left",
     "buttons": []
@@ -14,7 +14,7 @@
       "visible": true,
       "title": "Group Photo",
       "caption": "Replace with a current group photo",
-      "image": "",
+      "image": "assets/uploads/屏幕截图-2025-06-25-193928.png",
       "large": true
     },
     {
