@@ -29,13 +29,14 @@
     {
       "details": "65, e7485683.",
       "authors": "Lebin Qian, Yi Wang, Lei Zhu, Xiaotian Qi, Xinjun Luan, Zhijun Zuo*",
-      "tocLabel": "TOC pending",
+      "tocLabel": "",
+      "doiUrl": "https://onlinelibrary.wiley.com/doi/10.1002/anie.7485683",
       "visible": true,
       "tocImage": "assets/uploads/图片1.png",
       "doiLabel": "DOI to be added",
       "journal": "Angew. Chem., Int. Ed.",
       "title": "Photoredox-catalyzed Chem- and Stereoselective Thiosulfonylation of Cyclopropylamides",
-      "journalUrl": "https://chemistry-europe.onlinelibrary.wiley.com/journal/15213773",
+      "journalUrl": "",
       "tocColor": "blue",
       "year": "2026"
     },
