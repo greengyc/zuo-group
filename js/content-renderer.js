@@ -74,6 +74,11 @@
     });
   }
 
+  function choiceClass(prefix, value, allowed, fallback) {
+    const safeValue = allowed.includes(value) ? value : fallback;
+    return `${prefix}-${safeValue}`;
+  }
+
   function renderSite(data) {
     if (!data) return;
 
@@ -285,11 +290,16 @@
           const yearHeading = item.year !== currentYear ? `<h3 class="year-heading">${escapeHtml(item.year)}</h3>` : "";
           currentYear = item.year;
           const color = item.tocColor || colors[index % colors.length];
+          const tocWidth = choiceClass("toc-width", item.tocWidth, ["small", "standard", "wide"], "standard");
+          const tocHeight = choiceClass("toc-height", item.tocHeight, ["short", "standard", "tall"], "standard");
+          const tocFit = choiceClass("fit", item.tocFit, ["contain", "cover"], "contain");
+          const tocPosition = choiceClass("pos", item.tocPosition, ["center", "top", "bottom", "left", "right"], "center");
+          const tocBackground = choiceClass("bg", item.tocBackground, ["white", "light", "transparent"], "white");
           const toc = item.tocImage
-            ? `<div class="toc-box image"><img src="${escapeAttr(item.tocImage)}" alt="${escapeAttr(item.title)} TOC graphic" /></div>`
+            ? `<div class="toc-box image ${tocHeight} ${tocFit} ${tocPosition} ${tocBackground}"><img src="${escapeAttr(item.tocImage)}" alt="${escapeAttr(item.title)} TOC graphic" /></div>`
             : `<div class="toc-box ${escapeAttr(color)}"><span>${escapeHtml(item.tocLabel || "TOC pending")}</span></div>`;
           return `${yearHeading}
-          <article class="publication-item">
+          <article class="publication-item ${tocWidth}">
             ${toc}
             <div>
               <span class="pub-year">${escapeHtml(item.year)}</span>

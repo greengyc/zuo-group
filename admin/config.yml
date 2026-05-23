@@ -261,6 +261,52 @@ collections:
               - { label: "Journal abbreviation", name: "journal", widget: "string" }
               - { label: "Volume / page / DOI details", name: "details", widget: "string" }
               - { label: "TOC image", name: "tocImage", widget: "image", required: false }
+              - label: "TOC image width in publication row"
+                name: "tocWidth"
+                widget: "select"
+                required: false
+                default: "standard"
+                options:
+                  - { label: "Standard", value: "standard" }
+                  - { label: "Small", value: "small" }
+                  - { label: "Wide", value: "wide" }
+              - label: "TOC image height"
+                name: "tocHeight"
+                widget: "select"
+                required: false
+                default: "standard"
+                options:
+                  - { label: "Standard", value: "standard" }
+                  - { label: "Short", value: "short" }
+                  - { label: "Tall", value: "tall" }
+              - label: "TOC image display mode"
+                name: "tocFit"
+                widget: "select"
+                required: false
+                default: "contain"
+                options:
+                  - { label: "Show full image, no cropping", value: "contain" }
+                  - { label: "Fill area, crop edges if needed", value: "cover" }
+              - label: "TOC image position"
+                name: "tocPosition"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Center", value: "center" }
+                  - { label: "Top", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+              - label: "TOC image background"
+                name: "tocBackground"
+                widget: "select"
+                required: false
+                default: "white"
+                options:
+                  - { label: "White", value: "white" }
+                  - { label: "Light gray", value: "light" }
+                  - { label: "Transparent", value: "transparent" }
               - { label: "TOC placeholder text", name: "tocLabel", widget: "string", required: false, default: "TOC pending" }
               - { label: "TOC placeholder color", name: "tocColor", widget: "select", required: false, options: ["blue", "teal", "red", "gold"] }
               - { label: "DOI URL", name: "doiUrl", widget: "string", required: false }
