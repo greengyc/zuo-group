@@ -33,10 +33,10 @@
       "doiUrl": "https://onlinelibrary.wiley.com/doi/10.1002/anie.7485683",
       "visible": true,
       "tocImage": "assets/uploads/图片1.png",
-      "doiLabel": "DOI to be added",
+      "doiLabel": "https://onlinelibrary.wiley.com/doi/10.1002/anie.7485683",
       "journal": "Angew. Chem., Int. Ed.",
       "title": "Photoredox-catalyzed Chem- and Stereoselective Thiosulfonylation of Cyclopropylamides",
-      "journalUrl": "",
+      "journalUrl": "https://onlinelibrary.wiley.com/doi/10.1002/anie.7485683",
       "tocColor": "blue",
       "year": "2026"
     },
