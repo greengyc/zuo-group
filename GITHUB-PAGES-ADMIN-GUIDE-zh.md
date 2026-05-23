@@ -28,7 +28,15 @@ admin-netlify/
 
 维护者需要有 GitHub 账号，并且已经被加入 `greengyc/zuo-group` 仓库的协作者。
 
-如果后台要求输入 GitHub token，请在 GitHub 里创建一个只用于本网站维护的 token。权限建议只给这个仓库，并开启内容读写权限。保存 token 后，进入 `/admin/` 登录。
+这个后台使用 GitHub access token 登录。进入 `/admin/` 后请选择：
+
+```text
+Sign In Using Access Token
+```
+
+不要使用 GitHub OAuth 登录按钮。OAuth 登录需要额外的授权服务；本站为了避免继续依赖 Netlify，日常维护统一使用 access token。
+
+请在 GitHub 里创建一个只用于本网站维护的 token。权限建议只给这个仓库，并开启内容读写权限。保存 token 后，进入 `/admin/` 登录。
 
 ## 日常修改流程
 
