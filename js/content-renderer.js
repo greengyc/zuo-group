@@ -79,6 +79,44 @@
     return `${prefix}-${safeValue}`;
   }
 
+  const imagePositions = ["center", "top", "bottom", "left", "right"];
+
+  function positionValue(value) {
+    const positions = {
+      top: "center top",
+      bottom: "center bottom",
+      left: "left center",
+      right: "right center",
+      center: "center center"
+    };
+    return positions[value] || positions.center;
+  }
+
+  function imageDisplayClasses(baseClass, source = {}, options = {}) {
+    const sizeField = options.sizeField || "imageHeight";
+    const fitField = options.fitField || "imageFit";
+    const positionField = options.positionField || "imagePosition";
+    const sizePrefix = options.sizePrefix || "image-height";
+    const sizes = options.sizes || ["short", "standard", "tall"];
+    const fallbackSize = options.fallbackSize || "standard";
+    const fallbackFit = options.fallbackFit || "cover";
+    return [
+      baseClass,
+      choiceClass(sizePrefix, source[sizeField], sizes, fallbackSize),
+      choiceClass("fit", source[fitField], ["contain", "cover"], fallbackFit),
+      choiceClass("pos", source[positionField], imagePositions, "center")
+    ].join(" ");
+  }
+
+  function applyHeroControls(heroSection, hero = {}, options = {}) {
+    const heightFallback = options.heightFallback || "standard";
+    heroSection.classList.remove("hero-height-compact", "hero-height-standard", "hero-height-tall");
+    heroSection.classList.add(choiceClass("hero-height", hero.heroHeight, ["compact", "standard", "tall"], heightFallback));
+    heroSection.style.backgroundPosition = positionValue(hero.backgroundPosition);
+    heroSection.style.backgroundSize = hero.backgroundSize === "contain" ? "contain" : "cover";
+    heroSection.style.backgroundRepeat = "no-repeat";
+  }
+
   function renderSite(data) {
     if (!data) return;
 
@@ -132,6 +170,7 @@
       heroSection.classList.remove("hero-size-compact", "hero-size-normal", "hero-size-large", "hero-align-left", "hero-align-center");
       heroSection.classList.add(`hero-size-${hero.titleSize || "normal"}`);
       heroSection.classList.add(`hero-align-${hero.textAlignment || "left"}`);
+      applyHeroControls(heroSection, hero);
       if (hero.backgroundImage) {
         const backgroundUrl = String(hero.backgroundImage).replace(/"/g, '\\"');
         heroSection.style.backgroundImage = `linear-gradient(120deg, rgba(16, 24, 32, 0.92), rgba(23, 32, 42, 0.78)), url("${backgroundUrl}")`;
@@ -154,7 +193,7 @@
     target.innerHTML = visibleItems(blocks)
       .map((block) => {
         if (block.type === "image") {
-          const image = block.image ? `<img src="${escapeAttr(block.image)}" alt="${escapeAttr(block.title || "Image")}" />` : "";
+          const image = block.image ? `<img class="${imageDisplayClasses("editable-block-image", block)}" src="${escapeAttr(block.image)}" alt="${escapeAttr(block.title || "Image")}" />` : "";
           return `<article class="${classPrefix}-block image-block">${image}<div><h2>${escapeHtml(block.title)}</h2><p>${escapeHtml(block.text)}</p>${buttonFromFields(block)}</div></article>`;
         }
 
@@ -179,8 +218,16 @@
     if (heroSection) {
       heroSection.hidden = hero.show === false;
       heroSection.classList.toggle("hero-align-center", hero.textAlignment === "center");
+      applyHeroControls(heroSection, hero, { heightFallback: "tall" });
       const media = heroSection.querySelector("[data-home-hero-image]");
-      if (media && hero.backgroundImage) media.src = hero.backgroundImage;
+      if (media) {
+        media.className = imageDisplayClasses("hero-media", {
+          imageFit: hero.backgroundSize,
+          imagePosition: hero.backgroundPosition,
+          imageHeight: "standard"
+        });
+        if (hero.backgroundImage) media.src = hero.backgroundImage;
+      }
       setText("[data-home-hero-eyebrow]", hero.eyebrow);
       setText("[data-home-hero-title]", hero.title);
       setText("[data-home-hero-statement]", hero.statement);
@@ -204,6 +251,7 @@
       setText("[data-home-focus-text]", data.focus?.text);
       const image = focus.querySelector("[data-home-focus-image]");
       if (image) {
+        image.className = imageDisplayClasses("research-focus-image", data.focus, { fallbackFit: "contain" });
         if (data.focus?.image) image.src = data.focus.image;
         if (data.focus?.imageAlt !== undefined) image.alt = data.focus.imageAlt;
       }
@@ -334,7 +382,15 @@
               .map((member) => {
                 if (member.featured) {
                   const tags = (member.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
-                  const photo = member.photo ? `<img class="person-photo" src="${escapeAttr(member.photo)}" alt="${escapeAttr(member.name)}" />` : "";
+                  const photoClasses = imageDisplayClasses("person-photo", member, {
+                    sizeField: "photoSize",
+                    fitField: "photoFit",
+                    positionField: "photoPosition",
+                    sizePrefix: "photo-size",
+                    sizes: ["small", "standard", "large"],
+                    fallbackSize: "standard"
+                  });
+                  const photo = member.photo ? `<img class="${photoClasses}" src="${escapeAttr(member.photo)}" alt="${escapeAttr(member.name)}" />` : "";
                   return `<article class="person-large">
                     ${photo}
                     <div>
@@ -366,7 +422,7 @@
 
     target.innerHTML = visibleItems(items)
       .map((item) => {
-        const image = item.image ? `<img class="news-item-image" src="${escapeAttr(item.image)}" alt="${escapeAttr(item.title)}" />` : "";
+        const image = item.image ? `<img class="${imageDisplayClasses("news-item-image", item)}" src="${escapeAttr(item.image)}" alt="${escapeAttr(item.title)}" />` : "";
         return `<article class="${image ? "has-image" : ""}">${image}<div><time>${escapeHtml(item.date)}</time><h2>${escapeHtml(item.title)}</h2><p>${escapeHtml(item.text)}</p>${buttonFromFields(item)}</div></article>`;
       })
       .join("");
@@ -429,7 +485,12 @@
 
     target.innerHTML = visibleItems(data.photos)
       .map((photo) => {
-        const classes = photo.large ? "photo-tile large" : "photo-tile";
+        const classes = [
+          photo.large ? "photo-tile large" : "photo-tile",
+          choiceClass("photo-height", photo.imageHeight, ["short", "standard", "tall"], "standard"),
+          choiceClass("bg-fit", photo.imageFit, ["contain", "cover"], "cover"),
+          choiceClass("bg-pos", photo.imagePosition, imagePositions, "center")
+        ].join(" ");
         const image = photo.image ? ` style="background-image: linear-gradient(rgba(16, 24, 32, 0.28), rgba(16, 24, 32, 0.28)), url('${escapeAttr(photo.image)}')"` : "";
         return `<div class="${classes}"${image}><span>${escapeHtml(photo.title)}</span><small>${escapeHtml(photo.caption)}</small></div>`;
       })
@@ -443,7 +504,7 @@
 
     target.innerHTML = visibleItems(data.items)
       .map((item) => {
-        const image = item.image ? `<img class="info-card-image" src="${escapeAttr(item.image)}" alt="${escapeAttr(item.name)}" />` : "";
+        const image = item.image ? `<img class="${imageDisplayClasses("info-card-image", item)}" src="${escapeAttr(item.image)}" alt="${escapeAttr(item.name)}" />` : "";
         return `<article class="info-card">${image}<i data-lucide="${escapeAttr(item.icon || "flask-conical")}"></i><h2>${escapeHtml(item.name)}</h2><p>${escapeHtml(item.description)}</p>${buttonFromFields(item)}</article>`;
       })
       .join("");

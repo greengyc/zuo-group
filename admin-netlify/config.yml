@@ -1,8 +1,8 @@
 backend:
-  name: github
-  repo: greengyc/zuo-group
+  name: git-gateway
   branch: main
 
+local_backend: true
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"
 site_url: "https://greengyc.github.io/zuo-group/"
