@@ -7,13 +7,13 @@
 公开网站：
 
 ```text
-https://greengyc.github.io/zuo-group/
+https://zuozhijun1502.github.io/zuo-group/
 ```
 
 GitHub Pages 后台：
 
 ```text
-https://greengyc.github.io/zuo-group/admin/
+https://zuozhijun1502.github.io/zuo-group/admin/
 ```
 
 Netlify 旧后台备份文件：
@@ -26,7 +26,7 @@ admin-netlify/
 
 ## 第一次登录
 
-维护者需要有 GitHub 账号，并且已经被加入 `greengyc/zuo-group` 仓库的协作者。
+维护者需要有 GitHub 账号，并且已经被加入 `zuozhijun1502/zuo-group` 仓库的协作者。
 
 这个后台使用 GitHub access token 登录。进入 `/admin/` 后请选择：
 

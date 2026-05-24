@@ -3,13 +3,13 @@
 Online website:
 
 ```text
-https://greengyc.github.io/zuo-group/
+https://zuozhijun1502.github.io/zuo-group/
 ```
 
 GitHub repository:
 
 ```text
-https://github.com/greengyc/zuo-group
+https://github.com/zuozhijun1502/zuo-group
 ```
 
 ## The Simple Rule

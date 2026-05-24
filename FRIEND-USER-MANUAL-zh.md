@@ -17,19 +17,13 @@
 公开网站地址：
 
 ```text
-https://greengyc.github.io/zuo-group/
+https://zuozhijun1502.github.io/zuo-group/
 ```
 
 后台管理地址：
 
 ```text
-https://你的-Netlify-网站地址/admin/
-```
-
-如果目前 Netlify 地址还没有改名，可能类似：
-
-```text
-https://monumental-sable-696eed.netlify.app/admin/
+https://zuozhijun1502.github.io/zuo-group/admin/
 ```
 
 以后如果绑定了正式域名，后台地址通常会变成：
@@ -42,24 +36,26 @@ https://正式域名/admin/
 
 ## 第一次登录后台
 
-你会收到一封 Netlify 或网站后台发来的邀请邮件。
+后台使用 GitHub 账号和 access token 登录。这个 token 可以理解成“后台编辑钥匙”，不是收费项目，也不会因为正常编辑网页而用完。
 
-操作步骤：
+第一次使用前，需要先在 GitHub 里生成一次 token。建议保存到自己的电脑或密码管理器里，不要发给别人。
+
+后台登录步骤：
 
 ```text
-打开邀请邮件
-点击 Accept invite / 接受邀请
-设置密码
+打开后台地址
+点击 Sign In Using Access Token
+粘贴自己的 GitHub token
 进入后台
 ```
 
 以后登录时直接打开：
 
 ```text
-https://你的-Netlify-网站地址/admin/
+https://zuozhijun1502.github.io/zuo-group/admin/
 ```
 
-如果看到登录页面，输入邮箱和密码即可。
+如果看到蓝色的 Sign In with GitHub 按钮，不建议使用它；请优先使用 Sign In Using Access Token。
 
 ## 后台页面长什么样
 

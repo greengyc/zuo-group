@@ -1,15 +1,15 @@
 backend:
   name: github
-  repo: greengyc/zuo-group
+  repo: zuozhijun1502/zuo-group
   branch: main
   auth_methods:
     - token
 
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"
-site_url: "https://greengyc.github.io/zuo-group/"
-display_url: "https://greengyc.github.io/zuo-group/"
-logo_url: "https://greengyc.github.io/zuo-group/assets/hero-lab.png"
+site_url: "https://zuozhijun1502.github.io/zuo-group/"
+display_url: "https://zuozhijun1502.github.io/zuo-group/"
+logo_url: "https://zuozhijun1502.github.io/zuo-group/assets/hero-lab.png"
 
 collections:
   - name: "website_content"
