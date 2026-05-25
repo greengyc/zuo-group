@@ -267,7 +267,10 @@
         {
           "visible": true,
           "name": "To be updated",
-          "role": "Undergraduate Researcher"
+          "role": "Undergraduate Researcher",
+          "degree": "",
+          "year": "",
+          "destination": ""
         }
       ]
     },
@@ -275,7 +278,64 @@
       "visible": true,
       "category": "Alumni",
       "note": "Future format: name, degree, graduation year, and current position.",
-      "members": []
+      "members": [
+        {
+          "visible": true,
+          "name": "Haohao Huang",
+          "role": "Master Student",
+          "photo": "",
+          "photoFit": "cover",
+          "photoPosition": "center",
+          "photoSize": "standard",
+          "featured": false,
+          "tags": [],
+          "degree": "",
+          "year": "2022-2024",
+          "destination": ""
+        },
+        {
+          "visible": true,
+          "name": "Ziyi Wang",
+          "role": "Master Student",
+          "photo": "",
+          "photoFit": "cover",
+          "photoPosition": "center",
+          "photoSize": "standard",
+          "featured": false,
+          "tags": [],
+          "degree": "2022-2025",
+          "year": "",
+          "destination": ""
+        },
+        {
+          "visible": true,
+          "name": "Jiyao Zhang",
+          "role": "Master Student",
+          "photo": "",
+          "photoFit": "cover",
+          "photoPosition": "center",
+          "photoSize": "standard",
+          "featured": false,
+          "tags": [],
+          "degree": "",
+          "year": "2022-2025",
+          "destination": ""
+        },
+        {
+          "visible": true,
+          "name": "Yu Sun",
+          "role": "Master Student",
+          "photo": "",
+          "photoFit": "cover",
+          "photoPosition": "center",
+          "photoSize": "standard",
+          "featured": false,
+          "tags": [],
+          "degree": "",
+          "year": "2022-2025",
+          "destination": ""
+        }
+      ]
     }
   ]
 }
