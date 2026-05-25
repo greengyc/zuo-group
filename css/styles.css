@@ -833,6 +833,21 @@ body[data-page="join"] .split-section h2::first-letter {
   margin-bottom: 54px;
 }
 
+.pi-category {
+  max-width: 1380px;
+}
+
+.pi-profile-layout {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.42fr) minmax(520px, 0.58fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.pi-profile-layout > .placeholder-grid {
+  grid-template-columns: 1fr;
+}
+
 .person-large {
   display: grid;
   grid-template-columns: max-content minmax(0, 1fr);
@@ -925,6 +940,28 @@ body[data-page="join"] .split-section h2::first-letter {
 .person-with-photo div {
   display: grid;
   gap: 6px;
+}
+
+.pi-bio-card {
+  padding: 26px 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.pi-bio-card .eyebrow {
+  margin-bottom: 14px;
+}
+
+.pi-bio-card p:not(.eyebrow) {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.62;
+}
+
+.pi-bio-card p:last-child {
+  margin-bottom: 0;
 }
 
 .timeline {
@@ -1406,6 +1443,7 @@ body[data-page="join"] .split-section h2::first-letter {
   }
 
   .split-section,
+  .pi-profile-layout,
   .research-layout,
   .publication-item,
   .person-large,
