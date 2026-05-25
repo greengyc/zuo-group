@@ -57,14 +57,22 @@
           "visible": true,
           "name": "Lebin Qian",
           "role": "PhD Student",
+          "photo": "/assets/uploads/20240927_1727430901282.jpg",
+          "photoFit": "contain",
+          "photoPosition": "left",
+          "photoSize": "standard",
           "degree": "",
           "year": "",
           "destination": ""
         },
         {
           "visible": true,
-          "name": "To be updated",
+          "name": "Yi Wang",
           "role": "PhD Student",
+          "photo": "/assets/uploads/20240928_1727514647041.jpg",
+          "photoFit": "contain",
+          "photoPosition": "left",
+          "photoSize": "standard",
           "degree": "",
           "year": "",
           "destination": ""
