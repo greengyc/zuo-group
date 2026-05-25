@@ -54,23 +54,47 @@
         {
           "visible": true,
           "name": "Lebin Qian",
-          "role": "PhD Student"
+          "role": "PhD Student",
+          "degree": "",
+          "year": "",
+          "destination": ""
         },
         {
           "visible": true,
           "name": "To be updated",
-          "role": "Master Student"
+          "role": "PhD Student",
+          "degree": "",
+          "year": "",
+          "destination": ""
         },
         {
           "visible": true,
           "name": "To be updated",
-          "role": "Graduate Student"
+          "role": "PhD Student",
+          "degree": "",
+          "year": "",
+          "destination": ""
+        },
+        {
+          "visible": true,
+          "name": "PhD Student",
+          "role": "PhD Student",
+          "photo": "",
+          "photoFit": "cover",
+          "photoPosition": "center",
+          "photoSize": "standard",
+          "featured": false,
+          "tags": [],
+          "degree": "",
+          "year": "",
+          "destination": ""
         }
       ]
     },
     {
       "visible": true,
       "category": "Undergraduate Students",
+      "note": "",
       "members": [
         {
           "visible": true,
