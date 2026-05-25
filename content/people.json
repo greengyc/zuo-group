@@ -19,7 +19,7 @@
           "visible": true,
           "name": "Zhijun Zuo",
           "role": "Professor / Principal Investigator",
-          "photo": "/assets/uploads/微信图片_20260227213035_160_85.jpg",
+          "photo": "",
           "photoFit": "",
           "photoPosition": "left",
           "photoSize": "small",
@@ -40,6 +40,8 @@
           "visible": true,
           "name": "Waiting for you",
           "role": "Postdoctoral Fellow",
+          "photo": "/assets/uploads/微信图片_2026-05-25_114632_666.png",
+          "photoFit": "cover",
           "degree": "",
           "year": "",
           "destination": ""
