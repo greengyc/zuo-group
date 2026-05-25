@@ -38,18 +38,22 @@
       "members": [
         {
           "visible": true,
-          "name": "To be updated",
-          "role": "Postdoctoral Fellow"
+          "name": "Waiting for you",
+          "role": "Postdoctoral Fellow",
+          "degree": "",
+          "year": "",
+          "destination": ""
         }
       ]
     },
     {
       "visible": true,
       "category": "Graduate Students",
+      "note": "",
       "members": [
         {
           "visible": true,
-          "name": "To be updated",
+          "name": "Lebin Qian",
           "role": "PhD Student"
         },
         {
