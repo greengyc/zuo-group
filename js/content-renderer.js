@@ -444,7 +444,7 @@
             <div class="pi-profile-layout">
               ${wrappedBody}
               <article class="pi-bio-card">
-                <p class="eyebrow">Academic Experience</p>
+                <p class="eyebrow">Biography</p>
                 ${paragraphsHtml(group.note)}
               </article>
             </div>
