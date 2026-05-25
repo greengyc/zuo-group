@@ -267,7 +267,12 @@
       const image = focus.querySelector("[data-home-focus-image]");
       if (image) {
         image.className = imageDisplayClasses("research-focus-image", data.focus, { fallbackFit: "contain" });
-        if (data.focus?.image) image.src = assetUrl(data.focus.image);
+        image.hidden = !data.focus?.image;
+        if (data.focus?.image) {
+          image.src = assetUrl(data.focus.image);
+        } else {
+          image.removeAttribute("src");
+        }
         if (data.focus?.imageAlt !== undefined) image.alt = data.focus.imageAlt;
       }
       const link = focus.querySelector("[data-home-focus-link]");
