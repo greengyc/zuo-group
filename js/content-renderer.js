@@ -187,7 +187,7 @@
       heroSection.classList.add(`hero-align-${hero.textAlignment || "left"}`);
       applyHeroControls(heroSection, hero);
       if (hero.backgroundImage) {
-        const backgroundUrl = String(hero.backgroundImage).replace(/"/g, '\\"');
+        const backgroundUrl = assetUrl(hero.backgroundImage).replace(/"/g, '\\"');
         heroSection.style.backgroundImage = `linear-gradient(120deg, rgba(16, 24, 32, 0.92), rgba(23, 32, 42, 0.78)), url("${backgroundUrl}")`;
       }
     }
@@ -208,7 +208,7 @@
     target.innerHTML = visibleItems(blocks)
       .map((block) => {
         if (block.type === "image") {
-          const image = block.image ? `<img class="${imageDisplayClasses("editable-block-image", block)}" src="${escapeAttr(block.image)}" alt="${escapeAttr(block.title || "Image")}" />` : "";
+          const image = block.image ? `<img class="${imageDisplayClasses("editable-block-image", block)}" src="${escapeAttr(assetUrl(block.image))}" alt="${escapeAttr(block.title || "Image")}" />` : "";
           return `<article class="${classPrefix}-block image-block">${image}<div><h2>${escapeHtml(block.title)}</h2><p>${escapeHtml(block.text)}</p>${buttonFromFields(block)}</div></article>`;
         }
 
@@ -241,7 +241,7 @@
           imagePosition: hero.backgroundPosition,
           imageHeight: "standard"
         });
-        if (hero.backgroundImage) media.src = hero.backgroundImage;
+        if (hero.backgroundImage) media.src = assetUrl(hero.backgroundImage);
       }
       setText("[data-home-hero-eyebrow]", hero.eyebrow);
       setText("[data-home-hero-title]", hero.title);
@@ -267,7 +267,7 @@
       const image = focus.querySelector("[data-home-focus-image]");
       if (image) {
         image.className = imageDisplayClasses("research-focus-image", data.focus, { fallbackFit: "contain" });
-        if (data.focus?.image) image.src = data.focus.image;
+        if (data.focus?.image) image.src = assetUrl(data.focus.image);
         if (data.focus?.imageAlt !== undefined) image.alt = data.focus.imageAlt;
       }
       const link = focus.querySelector("[data-home-focus-link]");
@@ -359,7 +359,7 @@
           const tocPosition = choiceClass("pos", item.tocPosition, ["center", "top", "bottom", "left", "right"], "center");
           const tocBackground = choiceClass("bg", item.tocBackground, ["white", "light", "transparent"], "white");
           const toc = item.tocImage
-            ? `<div class="toc-box image ${tocHeight} ${tocFit} ${tocPosition} ${tocBackground}"><img src="${escapeAttr(item.tocImage)}" alt="${escapeAttr(item.title)} TOC graphic" /></div>`
+            ? `<div class="toc-box image ${tocHeight} ${tocFit} ${tocPosition} ${tocBackground}"><img src="${escapeAttr(assetUrl(item.tocImage))}" alt="${escapeAttr(item.title)} TOC graphic" /></div>`
             : `<div class="toc-box ${escapeAttr(color)}"><span>${escapeHtml(item.tocLabel || "TOC pending")}</span></div>`;
           return `${yearHeading}
           <article class="publication-item ${tocWidth}">
@@ -464,7 +464,7 @@
 
     target.innerHTML = visibleItems(items)
       .map((item) => {
-        const image = item.image ? `<img class="${imageDisplayClasses("news-item-image", item)}" src="${escapeAttr(item.image)}" alt="${escapeAttr(item.title)}" />` : "";
+        const image = item.image ? `<img class="${imageDisplayClasses("news-item-image", item)}" src="${escapeAttr(assetUrl(item.image))}" alt="${escapeAttr(item.title)}" />` : "";
         return `<article class="${image ? "has-image" : ""}">${image}<div><time>${escapeHtml(item.date)}</time><h2>${escapeHtml(item.title)}</h2><p>${escapeHtml(item.text)}</p>${buttonFromFields(item)}</div></article>`;
       })
       .join("");
@@ -533,7 +533,7 @@
           choiceClass("bg-fit", photo.imageFit, ["contain", "cover"], "cover"),
           choiceClass("bg-pos", photo.imagePosition, imagePositions, "center")
         ].join(" ");
-        const image = photo.image ? ` style="background-image: linear-gradient(rgba(16, 24, 32, 0.28), rgba(16, 24, 32, 0.28)), url('${escapeAttr(photo.image)}')"` : "";
+        const image = photo.image ? ` style="background-image: linear-gradient(rgba(16, 24, 32, 0.28), rgba(16, 24, 32, 0.28)), url('${escapeAttr(assetUrl(photo.image))}')"` : "";
         return `<div class="${classes}"${image}><span>${escapeHtml(photo.title)}</span><small>${escapeHtml(photo.caption)}</small></div>`;
       })
       .join("");
@@ -546,7 +546,7 @@
 
     target.innerHTML = visibleItems(data.items)
       .map((item) => {
-        const image = item.image ? `<img class="${imageDisplayClasses("info-card-image", item)}" src="${escapeAttr(item.image)}" alt="${escapeAttr(item.name)}" />` : "";
+        const image = item.image ? `<img class="${imageDisplayClasses("info-card-image", item)}" src="${escapeAttr(assetUrl(item.image))}" alt="${escapeAttr(item.name)}" />` : "";
         return `<article class="info-card">${image}<i data-lucide="${escapeAttr(item.icon || "flask-conical")}"></i><h2>${escapeHtml(item.name)}</h2><p>${escapeHtml(item.description)}</p>${buttonFromFields(item)}</article>`;
       })
       .join("");
