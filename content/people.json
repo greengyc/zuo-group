@@ -3,7 +3,7 @@
     "show": true,
     "eyebrow": "People",
     "title": "Zhijun Zuo Research Group",
-    "subtitle": "Photoredox, radical, and asymmetric metal catalysis in synthesis.",
+    "subtitle": "Photoredox, radical, and asymmetric metal catalysis in synthesis.111",
     "backgroundImage": "assets/hero-lab.png",
     "titleSize": "normal",
     "textAlignment": "left",
@@ -19,12 +19,12 @@
           "name": "Zhijun Zuo",
           "role": "Professor / Principal Investigator",
           "photo": "assets/people/zhijun-zuo.jpg",
+          "featured": true,
           "tags": [
             "Organic Synthesis",
             "Photoredox Catalysis",
             "Radical Chemistry"
-          ],
-          "featured": true
+          ]
         }
       ]
     },
