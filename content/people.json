@@ -21,6 +21,7 @@
           "role": "Professor / Principal Investigator",
           "photo": "/assets/uploads/微信图片_20260227213035_160_85.jpg",
           "photoFit": "cover",
+          "photoPosition": "left",
           "photoSize": "standard",
           "featured": false,
           "tags": [],
