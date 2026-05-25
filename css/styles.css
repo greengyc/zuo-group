@@ -915,6 +915,18 @@ body[data-page="join"] .split-section h2::first-letter {
   font-size: 13px;
 }
 
+.person-with-photo {
+  grid-template-columns: max-content minmax(0, 1fr);
+  justify-content: start;
+  gap: 18px;
+  text-align: left;
+}
+
+.person-with-photo div {
+  display: grid;
+  gap: 6px;
+}
+
 .timeline {
   max-width: 920px;
   display: grid;
