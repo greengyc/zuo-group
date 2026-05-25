@@ -62,6 +62,15 @@
     return value;
   }
 
+  function paragraphsHtml(value) {
+    return String(value || "")
+      .split(/\n+/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean)
+      .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+      .join("");
+  }
+
   function buttonHtml(button, fallbackStyle = "primary") {
     if (!button || button.visible === false || !button.label || !button.url) return "";
     const safeStyle = button.style === "ghost" ? "ghost" : fallbackStyle;
@@ -427,7 +436,20 @@
               .join("")
           : `<p class="muted-text">${escapeHtml(group.note || "To be updated.")}</p>`;
 
+        const isPrincipalInvestigator = String(group.category || "").toLowerCase().includes("principal investigator");
         const wrappedBody = members.some((member) => member.featured) || !members.length ? body : `<div class="placeholder-grid">${body}</div>`;
+        if (isPrincipalInvestigator && group.note) {
+          return `<div class="people-category pi-category">
+            <h2>${escapeHtml(group.category)}</h2>
+            <div class="pi-profile-layout">
+              ${wrappedBody}
+              <article class="pi-bio-card">
+                <p class="eyebrow">Academic Experience</p>
+                ${paragraphsHtml(group.note)}
+              </article>
+            </div>
+          </div>`;
+        }
         return `<div class="people-category"><h2>${escapeHtml(group.category)}</h2>${wrappedBody}</div>`;
       })
       .join("");
