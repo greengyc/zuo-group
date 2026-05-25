@@ -5,7 +5,7 @@
     "title": "Catalytic strategies for selective synthesis.",
     "subtitle": "Photoredox catalysis, radical chemistry, and asymmetric metal catalysis for modern organic synthesis.",
     "backgroundImage": "assets/hero-lab.png",
-    "titleSize": "normal",
+    "titleSize": "compact",
     "textAlignment": "left",
     "buttons": []
   },
