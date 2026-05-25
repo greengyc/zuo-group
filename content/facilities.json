@@ -15,9 +15,7 @@
       "icon": "activity",
       "name": "HPLC",
       "description": "High-performance liquid chromatography for reaction monitoring, purification support, and analytical workflows.",
-      "image": "/assets/uploads/webue_20260404_97581775306170190_compressed.png",
-      "imageFit": "contain",
-      "imageHeight": "standard",
+      "image": "/assets/uploads/webue_20260404_97581775306170190.jpg",
       "buttonLabel": "",
       "buttonUrl": "",
       "buttonIcon": ""
@@ -28,11 +26,23 @@
       "name": "GC-MS",
       "description": "Gas chromatography-mass spectrometry for volatile products, reaction screening, and product identification.",
       "image": "/assets/uploads/webue_20260404_39201775306175682.jpg",
-      "imageFit": "cover",
-      "imageHeight": "standard",
       "buttonLabel": "",
       "buttonUrl": "",
       "buttonIcon": ""
+    },
+    {
+      "visible": true,
+      "icon": "",
+      "name": "GC",
+      "description": "Gas chromatography (GC) is an analytical technique used to separate, identify, and quantify volatile compounds in a mixture by passing them through a column using an inert carrier gas.",
+      "image": "/assets/uploads/webue_20260404_88111775306178052.jpg",
+      "imageFit": "cover",
+      "imagePosition": "center",
+      "imageHeight": "standard",
+      "buttonLabel": "",
+      "buttonUrl": "",
+      "buttonIcon": "",
+      "buttonStyle": "primary"
     }
   ]
 }
