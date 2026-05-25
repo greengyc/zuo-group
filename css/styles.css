@@ -345,11 +345,11 @@ h3 {
   padding: clamp(72px, 8vw, 124px) clamp(20px, 6vw, 88px);
 }
 
-/* Non-home page headers use fixed text slots so page switching does not jump. */
+/* Non-home page headers keep stable spacing while allowing long titles to wrap. */
 .page-hero {
   display: grid;
   min-height: var(--hero-height);
-  grid-template-rows: 22px 96px 72px;
+  grid-template-rows: auto auto auto;
   row-gap: 16px;
   align-content: center;
   padding-top: 0;
@@ -376,12 +376,13 @@ h3 {
 }
 
 .page-hero h1 {
-  height: 96px;
+  max-width: min(1120px, 100%);
+  min-height: 1.08em;
   margin: 0;
-  font-size: clamp(54px, 5.5vw, 92px);
-  line-height: 96px;
-  overflow: hidden;
-  white-space: nowrap;
+  font-size: clamp(46px, 4.8vw, 78px);
+  line-height: 1.08;
+  overflow: visible;
+  white-space: normal;
 }
 
 .page-hero > p:not(.eyebrow) {
@@ -402,15 +403,15 @@ h3 {
 }
 
 .page-hero.hero-size-compact h1 {
-  height: 84px;
+  min-height: 1.08em;
   font-size: clamp(46px, 4.8vw, 76px);
-  line-height: 84px;
+  line-height: 1.08;
 }
 
 .page-hero.hero-size-large h1 {
-  height: 112px;
-  font-size: clamp(64px, 6vw, 104px);
-  line-height: 112px;
+  min-height: 1.08em;
+  font-size: clamp(52px, 5.2vw, 86px);
+  line-height: 1.08;
 }
 
 .page-hero.hero-align-center {
