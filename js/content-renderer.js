@@ -56,6 +56,12 @@
     return /^https?:\/\//i.test(String(url || ""));
   }
 
+  function assetUrl(url) {
+    const value = String(url || "");
+    if (value.startsWith("/assets/")) return value.slice(1);
+    return value;
+  }
+
   function buttonHtml(button, fallbackStyle = "primary") {
     if (!button || button.visible === false || !button.label || !button.url) return "";
     const safeStyle = button.style === "ghost" ? "ghost" : fallbackStyle;
@@ -390,7 +396,7 @@
                     sizes: ["small", "standard", "large"],
                     fallbackSize: "standard"
                   });
-                  const photo = member.photo ? `<img class="${photoClasses}" src="${escapeAttr(member.photo)}" alt="${escapeAttr(member.name)}" />` : "";
+                  const photo = member.photo ? `<img class="${photoClasses}" src="${escapeAttr(assetUrl(member.photo))}" alt="${escapeAttr(member.name)}" />` : "";
                   return `<article class="person-large">
                     ${photo}
                     <div>
@@ -402,6 +408,20 @@
                 }
 
                 const detail = [member.role, member.degree, member.year, member.destination].filter(Boolean).join(" / ");
+                if (member.photo) {
+                  const photoClasses = imageDisplayClasses("person-photo", member, {
+                    sizeField: "photoSize",
+                    fitField: "photoFit",
+                    positionField: "photoPosition",
+                    sizePrefix: "photo-size",
+                    sizes: ["small", "standard", "large"],
+                    fallbackSize: "standard"
+                  });
+                  return `<article class="person-placeholder person-with-photo">
+                    <img class="${photoClasses}" src="${escapeAttr(assetUrl(member.photo))}" alt="${escapeAttr(member.name)}" />
+                    <div><strong>${escapeHtml(member.name)}</strong><span>${escapeHtml(detail)}</span></div>
+                  </article>`;
+                }
                 return `<div class="person-placeholder"><strong>${escapeHtml(member.name)}</strong><span>${escapeHtml(detail)}</span></div>`;
               })
               .join("")
